@@ -2,10 +2,11 @@
 
 ## MVPs for project
 
-- Create an admin Login page
-- Admin Dashboard/HomePage
-- Create an Employee account from the HR admin side (an email will be sent to the employee with their generated password which they can change)
-- Navigation Bar - to display the different routes
+-	Create an admin Login page. This will be the first page introduced to the user. The main functionality of this page will be to allow the user to sign into the app. 
+-	Admin Dashboard/Homepage. This is the main page of the app. This page will include navigation prompts to direct the user to the rest of the app. 
+-	Add functionality to create an employee account, from the HR admin side. An email will be sent to the employee, prompting them to create a new password using the link provided. Once submitted, the password will then be stored in the database. 
+-	Add additional positions (roles). Each position will represent each job title/department employees can belong to. 
+
 
 ## Extensions for project
 - Admin Calendar page to view staff name (filter to find staff name), staff schedule by hour
@@ -17,4 +18,3 @@
 - Forgot me button
 - FAQs
 - Back the top feature
-- roles - to characterize the departments
