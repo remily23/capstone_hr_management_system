@@ -3,6 +3,7 @@ package com.server.Capstone.Project.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jdk.jfr.Name;
+import org.springframework.core.annotation.Order;
 
 import java.time.LocalDate;
 
@@ -11,14 +12,14 @@ import java.time.LocalDate;
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long employeeId;
 
-    @Column
+    @OrderColumn
     @Name(value= "first_name")
     private String firstName;
     @Name(value="last_name")
     private String lastName;
-    @Column
+    @OrderColumn
     private String email;
     @Column
     private String password;
@@ -61,8 +62,12 @@ public class Employee {
         this.position = position;
     }
 
-    public Long getId() {
-        return id;
+    public Long getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(Long employeeId) {
+        this.employeeId = employeeId;
     }
 
     public String getFirstName() {
@@ -103,10 +108,6 @@ public class Employee {
 
     public Position getPosition() {
         return position;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public void setFirstName(String firstName) {
