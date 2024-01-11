@@ -18,3 +18,13 @@
 - Forgot me button
 - FAQs
 - Back the top feature
+
+## ?. API Routes
+|       Request  | Path |Description                          |
+|:------------------------------:|:-------------|:-------------------------------------|
+|           POST            | /newemployee          | Add a new employee                    |
+|           GET            | /employees/{employeeId}         | Get employees by id                   |
+|           GET            | /employees       | Get all employees                 |             
+|           GET            | /positions/         | Display all employee positions, titles and access levels                   |   
+|           PATCH            | /employees/{employeeId}          | Update a specific employee by id              |
+|           DELETE            | /employees/{employeeId}         | Delete an employee by id                    |
