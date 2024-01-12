@@ -5,10 +5,9 @@ import com.server.Capstone.Project.services.PositionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("positions")
@@ -21,5 +20,11 @@ public class PositionController {
     public ResponseEntity<Position>createPosition(@RequestBody Position position){
         return new ResponseEntity<>(positionService.newPosition(position), HttpStatus.CREATED);
     }
+
+    @GetMapping
+    public ResponseEntity<List<Position>>findAllPositions(){
+        return new ResponseEntity<>(positionService.findAllPositions(), HttpStatus.OK);
+    }
+
 
 }
