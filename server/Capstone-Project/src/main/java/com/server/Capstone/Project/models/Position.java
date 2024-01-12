@@ -34,6 +34,9 @@ public class Position {
         this.employees = employees;
     }
 
+    public Position() {
+    }
+
     public Long getPositionId() {
         return positionId;
     }

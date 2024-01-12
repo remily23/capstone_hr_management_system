@@ -24,7 +24,7 @@ public class Employee {
     @Column
     private String password;
     @Column
-    private LocalDate dateOfBirth;
+    private String dateOfBirth;
     @Column
     private String address;
     @Column
@@ -44,12 +44,12 @@ public class Employee {
                     String lastName,
                     String email,
                     String password,
-                    LocalDate dateOfBirth,
+                    String dateOfBirth,
                     String address,
                     int phoneNumber,
                     int proRota,
-                    int salary,
-                    Position position) {
+                    int salary
+                    ) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -59,7 +59,10 @@ public class Employee {
         this.phoneNumber = phoneNumber;
         this.proRota = proRota;
         this.salary = salary;
-        this.position = position;
+//        this.position = position;
+    }
+
+    public Employee() {
     }
 
     public Long getEmployeeId() {
@@ -86,7 +89,7 @@ public class Employee {
         return password;
     }
 
-    public LocalDate getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
@@ -106,9 +109,9 @@ public class Employee {
         return salary;
     }
 
-    public Position getPosition() {
-        return position;
-    }
+//    public Position getPosition() {
+//        return position;
+//    }
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -126,7 +129,7 @@ public class Employee {
         this.password = password;
     }
 
-    public void setDateOfBirth(LocalDate dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -146,7 +149,7 @@ public class Employee {
         this.salary = salary;
     }
 
-    public void setPosition(Position position) {
-        this.position = position;
-    }
+//    public void setPosition(Position position) {
+//        this.position = position;
+//    }
 }
