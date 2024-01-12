@@ -33,6 +33,8 @@ public class Employee {
     private int proRota;
     @Column
     private int salary;
+    @Column
+    private Long positionId;
 
 
     @ManyToOne
@@ -48,7 +50,8 @@ public class Employee {
                     String address,
                     int phoneNumber,
                     int proRota,
-                    int salary
+                    int salary,
+                    Long positionId
                     ) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -59,7 +62,7 @@ public class Employee {
         this.phoneNumber = phoneNumber;
         this.proRota = proRota;
         this.salary = salary;
-//        this.position = position;
+        this.positionId = positionId;
     }
 
     public Employee() {
@@ -152,4 +155,19 @@ public class Employee {
 //    public void setPosition(Position position) {
 //        this.position = position;
 //    }
+    public Long getPositionId() {
+        return positionId;
+    }
+
+    public void setPositionId(Long positionId) {
+        this.positionId = positionId;
+    }
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
+    }
 }
