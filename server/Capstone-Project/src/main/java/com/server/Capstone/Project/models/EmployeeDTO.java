@@ -10,7 +10,7 @@ public class EmployeeDTO {
     private int phoneNumber;
     private int proRota;
     private int salary;
-    private int positionId;
+    private Long positionId;
 
 
     public EmployeeDTO() {
@@ -88,11 +88,11 @@ public class EmployeeDTO {
         this.salary = salary;
     }
 
-    public int getPositionId() {
+    public Long getPositionId() {
         return positionId;
     }
 
-    public void setPositionId(int positionId) {
+    public void setPositionId(Long positionId) {
         this.positionId = positionId;
     }
 }

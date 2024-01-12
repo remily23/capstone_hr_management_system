@@ -2,6 +2,7 @@ package com.server.Capstone.Project.services;
 
 
 import com.server.Capstone.Project.models.Employee;
+import com.server.Capstone.Project.models.EmployeeDTO;
 import com.server.Capstone.Project.respositories.EmployeeRepository;
 import com.server.Capstone.Project.respositories.PositionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,19 @@ public class EmployeeService {
         return employeeRepository.findAll();
     }
 
-    public Employee addEmployee( Employee employee) {
+    public Employee addEmployee(EmployeeDTO employeeDTO) {
+        Employee employee = new Employee(
+                employeeDTO.getFirstName(),
+                employeeDTO.getLastName(),
+                employeeDTO.getEmail(),
+                employeeDTO.getPassword(),
+                employeeDTO.getDateOfBirth(),
+                employeeDTO.getAddress(),
+                employeeDTO.getPhoneNumber(),
+                employeeDTO.getProRota(),
+                employeeDTO.getSalary(),
+                employeeDTO.getPositionId()
+        );
         employeeRepository.save(employee);
         return employee;
     }

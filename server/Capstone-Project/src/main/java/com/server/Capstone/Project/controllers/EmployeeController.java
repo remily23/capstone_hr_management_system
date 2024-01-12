@@ -2,6 +2,7 @@ package com.server.Capstone.Project.controllers;
 
 
 import com.server.Capstone.Project.models.Employee;
+import com.server.Capstone.Project.models.EmployeeDTO;
 import com.server.Capstone.Project.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -25,9 +26,9 @@ public class EmployeeController {
 
 
     @PostMapping
-    public  ResponseEntity <Employee> createEmployee(
-            @RequestBody Employee employee)
+    public ResponseEntity <Employee> createEmployee(
+            @RequestBody EmployeeDTO employeeDTO)
              {
-        return new ResponseEntity<>(employeeService.addEmployee(employee), HttpStatus.CREATED);
+        return new ResponseEntity<>(employeeService.addEmployee(employeeDTO), HttpStatus.CREATED);
     }
 }
