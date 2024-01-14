@@ -43,7 +43,7 @@ Fostering Agile Talent Ecosystems! TBC
 - GitHub
   
 ## 2.2. Client-side
-- Rainforest Retail HR Management System API (link to API folder TBA)
+- RainforestRetail HR Management System API (link to API folder TBA)
 - Visual Studio Code
 - JavaScript
 - HTML
