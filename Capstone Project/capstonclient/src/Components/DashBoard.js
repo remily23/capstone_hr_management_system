@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const home = () => {
+const DashBoard= () => {
     return (
         <h1>Homepage</h1>
+        
       );
 }
  
-export default home;
+export default DashBoard;

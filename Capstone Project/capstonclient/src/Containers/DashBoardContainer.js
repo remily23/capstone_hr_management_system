@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import CreateAccountForm from "../Components/CreateAccountForm";
 import LoginForm from "../Components/LoginForm";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import home from "../Components/Home";
 import Navigation from "../Components/Navigation";
+import DashBoard from "../Components/DashBoard";
 
 const DashBoardContainer = () => {
    const [listOfEmployees, setListOfEmployees] = useState([]);
@@ -29,6 +29,11 @@ const DashBoardContainer = () => {
       {path:"/", 
             element: <Navigation/>,
             children: [
+
+               {
+                  path: "/home",
+                  element: <DashBoard/>
+               },
                {
                   path: "/newaccount",
                   element: <CreateAccountForm listOfEmployees= {listOfEmployees[0]} postEmployee={postEmployee} />
@@ -44,7 +49,6 @@ const DashBoardContainer = () => {
    return (
 
       <>
-         <h2>Welcome Page</h2>
         < RouterProvider router = {appRoutes} />
 
       </>
