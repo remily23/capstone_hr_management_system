@@ -35,8 +35,7 @@ public class EmployeeService {
                 employeeDTO.getAddress(),
                 employeeDTO.getPhoneNumber(),
                 employeeDTO.getProRota(),
-                employeeDTO.getSalary(),
-                employeeDTO.getPositionId()
+                employeeDTO.getSalary()
         );
         employeeRepository.save(employee);
         return employee;

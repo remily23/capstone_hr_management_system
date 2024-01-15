@@ -7,11 +7,9 @@ public class EmployeeDTO {
     private String password;
     private String dateOfBirth;
     private String address;
-    private int phoneNumber;
+    private String phoneNumber;
     private int proRota;
     private int salary;
-    private Long positionId;
-
 
     public EmployeeDTO() {
     }
@@ -64,11 +62,11 @@ public class EmployeeDTO {
         this.address = address;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -86,13 +84,5 @@ public class EmployeeDTO {
 
     public void setSalary(int salary) {
         this.salary = salary;
-    }
-
-    public Long getPositionId() {
-        return positionId;
-    }
-
-    public void setPositionId(Long positionId) {
-        this.positionId = positionId;
     }
 }

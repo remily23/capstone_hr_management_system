@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jdk.jfr.Name;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Table(name = "positions")
@@ -27,11 +28,11 @@ public class Position {
     @JsonIgnoreProperties({"position"})
     private List<Employee> employees;
 
-    public Position(String department, String title, String accessLevel, List<Employee> employees) {
+    public Position(String department, String title, String accessLevel) {
         this.department = department;
         this.title = title;
         this.accessLevel = accessLevel;
-        this.employees = employees;
+        this.employees = new ArrayList<>();
     }
 
     public Position() {
