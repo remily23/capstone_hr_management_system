@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 const CreateAccountForm = ({ currentUser, postEmployee }) => {
     const [stateEmployee, setStateEmployee] = useState({
         firstName: "",
@@ -12,10 +11,8 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
         proRota: "",
         salary: ""
     });
-
     const handleFormSubmit = (e) => {
         e.preventDefault();
-
         if (
             stateEmployee.firstName === "" ||
             stateEmployee.lastName === "" ||
@@ -43,21 +40,17 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
             salary: ""
         })
     }
-
     const handleChange = (e) => {
         let fieldName = e.target.name;
         let copiedEmployee = { ...stateEmployee };
         copiedEmployee[fieldName] = e.target.value;
         setStateEmployee(copiedEmployee);
     }
-
     return (
-
         <>
             <h1>CreateAccountPage</h1>
             <div>
                 <form onSubmit={handleFormSubmit}>
-                    {currentUser && (
                         <p>Access Level
                             <select id="dropdown">
                                 <option>Admin</option>
@@ -74,12 +67,9 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
                             <label>Salary: </label><input type="text" onChange={handleChange} name="salary" placeholder="Enter your salary" value={stateEmployee.salary} />
                             <input type="submit" value="Create" />
                         </p>
-                    )}
                 </form>
             </div>
-
-
         </>
     );
 }
-export default CreateAccountForm; 
+export default CreateAccountForm;

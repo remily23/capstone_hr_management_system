@@ -1,18 +1,13 @@
 import { useEffect, useState } from "react";
 import CreateAccountForm from "../Components/CreateAccountForm";
-
+import LoginForm from "../Components/LoginForm";
 const DashBoardContainer = () => {
-
-   const [currentUser, setCurrentUser] = useState("");
-   const [stateEmail, setStateEmail] = useState("");
    const [listOfEmployees, setListOfEmployees] = useState([]);
-
    const fetchEmployee = async () => {
       const response = await fetch("http://localhost:8080/employees")
       const data = await response.json()
-      setCurrentUser(data)
+      setListOfEmployees(data)
    }
-
    const postEmployee = async (newEmployee) => {
       const response = await fetch("http://localhost:8080/employees", {
          method: "POST",
@@ -22,21 +17,29 @@ const DashBoardContainer = () => {
       const addEmployee = await response.json()
       setListOfEmployees([...listOfEmployees, addEmployee]);
    }
-
-
-
    useEffect(() => {
-
       fetchEmployee();
    }, [])
-
    return (
-
       <>
          <h2>Welcome Page</h2>
-         <CreateAccountForm currentUser={currentUser[0]} postEmployee={postEmployee} />
+         <CreateAccountForm listOfEmployees= {listOfEmployees[0]} postEmployee={postEmployee} />
+         <LoginForm listOfEmployees= {listOfEmployees}/>
       </>
    );
 }
-
 export default DashBoardContainer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
