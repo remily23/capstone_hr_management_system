@@ -3,7 +3,7 @@
 const ProfilePage = ({currentUser}) => {
     return ( 
     <>
-        <h3>Profile page</h3>
+        <h3>Profile Page</h3>
         <p>First name: {currentUser.firstName}</p>
         <p>Last name: {currentUser.lastName}</p>
         <p>Email: {currentUser.email}</p>

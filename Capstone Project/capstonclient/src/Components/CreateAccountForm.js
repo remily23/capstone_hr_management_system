@@ -50,7 +50,7 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
     }
     return (
         <>
-            <h1>CreateAccountPage</h1>
+            <h2>Create Account Page</h2>
             <div>
                 <form onSubmit={handleFormSubmit}>
                         <p>Access Level
