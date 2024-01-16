@@ -11,6 +11,7 @@ import DashBoard from "../Components/DashBoard";
 
 const DashBoardContainer = () => {
   const [listOfEmployees, setListOfEmployees] = useState([]);
+  const [currentUser, setCurrentUser] = useState({})
   const fetchEmployee = async () => {
     const response = await fetch("http://localhost:8080/employees");
     const data = await response.json();
@@ -37,7 +38,7 @@ const DashBoardContainer = () => {
 
     {
       path: "/login",
-      element: <LoginForm listOfEmployees={listOfEmployees} />,
+      element: <LoginForm listOfEmployees={listOfEmployees} setCurrentUser={setCurrentUser} />,
     },
 
     {
@@ -46,7 +47,7 @@ const DashBoardContainer = () => {
       children: [
         {
           path: "/dashboard",
-          element: <DashBoard />,
+          element: <DashBoard currentUser = {currentUser} />,
         },
 
         {
