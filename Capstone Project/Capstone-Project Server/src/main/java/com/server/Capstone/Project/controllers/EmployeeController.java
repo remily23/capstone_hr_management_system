@@ -3,6 +3,7 @@ package com.server.Capstone.Project.controllers;
 
 import com.server.Capstone.Project.models.Employee;
 import com.server.Capstone.Project.models.EmployeeDTO;
+import com.server.Capstone.Project.models.UpdateUserDTO;
 import com.server.Capstone.Project.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,7 +34,7 @@ public class EmployeeController {
     }
 
     @PatchMapping (value = "/{id}")
-    public ResponseEntity<Employee> updateEmployee(@RequestBody EmployeeDTO employeeDTO, @PathVariable Long id){
-        return new ResponseEntity<>(employeeService.updateEmployee(id, employeeDTO), HttpStatus.OK);
+    public ResponseEntity<Employee> updateEmployee(@RequestBody UpdateUserDTO updateUserDTO, @PathVariable Long id){
+        return new ResponseEntity<>(employeeService.updateEmployee(id, updateUserDTO), HttpStatus.OK);
     }
 }

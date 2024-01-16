@@ -1,8 +1,10 @@
 package com.server.Capstone.Project.services;
 
 
+import com.fasterxml.jackson.annotation.JsonView;
 import com.server.Capstone.Project.models.Employee;
 import com.server.Capstone.Project.models.EmployeeDTO;
+import com.server.Capstone.Project.models.UpdateUserDTO;
 import com.server.Capstone.Project.respositories.EmployeeRepository;
 import com.server.Capstone.Project.respositories.PositionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,16 +47,16 @@ public class EmployeeService {
         return employeeRepository.findById(id).get();
     }
 
-    public Employee updateEmployee(Long id, EmployeeDTO employeeDTO) {
+    public Employee updateEmployee(Long id, UpdateUserDTO updateUserDTO) {
         Employee employee = employeeRepository.findById(id).get();
-        employee.setFirstName(employeeDTO.getFirstName());
-        employee.setLastName(employeeDTO.getLastName());
-        employee.setEmail(employeeDTO.getEmail());
-        employee.setDateOfBirth(employeeDTO.getDateOfBirth());
-        employee.setAddress(employeeDTO.getAddress());
-        employee.setPhoneNumber(employeeDTO.getPhoneNumber());
-        employee.setProRota(employeeDTO.getProRota());
-        employee.setSalary(employeeDTO.getSalary());
+        employee.setFirstName(updateUserDTO.getFirstName());
+        employee.setLastName(updateUserDTO.getLastName());
+        employee.setEmail(updateUserDTO.getEmail());
+        employee.setDateOfBirth(updateUserDTO.getDateOfBirth());
+        employee.setAddress(updateUserDTO.getAddress());
+        employee.setPhoneNumber(updateUserDTO.getPhoneNumber());
+        employee.setProRota(updateUserDTO.getProRota());
+        employee.setSalary(updateUserDTO.getSalary());
 
         employeeRepository.save(employee);
         return employee;
