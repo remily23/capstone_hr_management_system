@@ -44,4 +44,20 @@ public class EmployeeService {
     public Employee getEmployeeById(long id) {
         return employeeRepository.findById(id).get();
     }
+
+    public Employee updateEmployee(Long id, EmployeeDTO employeeDTO) {
+        Employee employee = employeeRepository.findById(id).get();
+        employee.setFirstName(employeeDTO.getFirstName());
+        employee.setLastName(employeeDTO.getLastName());
+        employee.setEmail(employeeDTO.getEmail());
+        employee.setDateOfBirth(employeeDTO.getDateOfBirth());
+        employee.setAddress(employeeDTO.getAddress());
+        employee.setPhoneNumber(employeeDTO.getPhoneNumber());
+        employee.setProRota(employeeDTO.getProRota());
+        employee.setSalary(employeeDTO.getSalary());
+
+        employeeRepository.save(employee);
+        return employee;
+    }
+
 }

@@ -1,3 +1,5 @@
+
+
 const ProfilePage = ({currentUser}) => {
     return ( 
     <>
@@ -5,7 +7,7 @@ const ProfilePage = ({currentUser}) => {
         <p>First name: {currentUser.firstName}</p>
         <p>Last name: {currentUser.lastName}</p>
         <p>Email: {currentUser.email}</p>
-        <p>Password: {currentUser.password}</p>
+        <p>Password: ********</p>
         <p>Date of birth: {currentUser.dateOfBirth}</p>
         <p>Address: {currentUser.adress}</p>
         <p>Phone number: {currentUser.phoneNumber}</p>
