@@ -1,16 +1,21 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const LoginForm = ({ listOfEmployees }) => {
+  const navigate = useNavigate();
   const [stateLogin, setStateLogin] = useState({
     email: "",
-    password: ""
+    password: "",
   });
   const handleFormSubmit = (event) => {
     event.preventDefault();
     const foundEmployee = listOfEmployees.find(
-      (employee) => employee.email === stateLogin.email && employee.password === stateLogin.password
+      (employee) =>
+        employee.email === stateLogin.email &&
+        employee.password === stateLogin.password
     );
     if (foundEmployee) {
       alert("Login successful");
+      navigate("/dashboard");
     } else {
       alert("Email or password is not correct");
       setStateLogin({ email: "", password: "" });
