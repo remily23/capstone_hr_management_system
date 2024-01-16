@@ -5,7 +5,7 @@ import DashBoardContainer from './Containers/DashBoardContainer';
 function App() {
   return (
     <>
-    <h1>RainForest retail HR</h1>
+    <h1>HireHues HR</h1>
     <DashBoardContainer />
     </>
   );

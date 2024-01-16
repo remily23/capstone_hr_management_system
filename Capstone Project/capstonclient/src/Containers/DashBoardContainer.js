@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import CreateAccountForm from "../Components/CreateAccountForm";
 import LoginForm from "../Components/LoginForm";
+import ProfilePage from "../Components/ProfilePage";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -59,6 +60,10 @@ const DashBoardContainer = () => {
             />
           ),
         },
+        {
+          path: "/profile",
+          element: <ProfilePage currentUser = {currentUser} />
+        }
       ],
     },
   ]);

@@ -23,7 +23,7 @@ const DashBoard = ({ currentUser }) => {
   }, []);
   return (
     <>
-      <h1>DashBoard page</h1>
+      <h2>DashBoard page</h2>
       <p>{`${greet}, ${currentUser.firstName} ${currentUser.lastName}!`}</p>
     </>
   );
