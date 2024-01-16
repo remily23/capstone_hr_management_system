@@ -20,7 +20,7 @@ public class DataLoader implements ApplicationRunner {
     }
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        Employee employee1 = new Employee(
+        Employee aanis = new Employee(
                 "Aanis",
                 "N",
                 "aanisn10@gmail.com",
@@ -32,7 +32,7 @@ public class DataLoader implements ApplicationRunner {
                 2000
         );
 
-        Employee employee2 = new Employee(
+        Employee tom = new Employee(
                 "Tom",
                 "Hanks",
                 "tomhanks@gmail.com",
@@ -46,7 +46,7 @@ public class DataLoader implements ApplicationRunner {
 
 
 
-        Employee employee3 = new Employee(
+        Employee saima = new Employee(
                 "Saima",
                 "M",
                 "saima@bnta.com",
@@ -58,7 +58,7 @@ public class DataLoader implements ApplicationRunner {
                 33
         );
 
-        Employee employee4 = new Employee(
+        Employee emily = new Employee(
                 "Emily",
                 "R",
                 "emily@bnta.com",
@@ -69,7 +69,7 @@ public class DataLoader implements ApplicationRunner {
                 14,
                 34
         );
-        Employee employee5 = new Employee(
+        Employee ryan = new Employee(
                 "Ryan",
                 "N",
                 "ryan@bnta.com",
@@ -80,7 +80,7 @@ public class DataLoader implements ApplicationRunner {
                 15,
                 35
         );
-        Employee employee6 = new Employee(
+        Employee gisele = new Employee(
                 "Gisele",
                 "A",
                 "gisel@bnta.com",
@@ -97,15 +97,15 @@ public class DataLoader implements ApplicationRunner {
                 "Manager",
                 "admin");
 
-        employeeRepository.save(employee1);
-        employeeRepository.save(employee2);
-        employeeRepository.save(employee3);
-        employeeRepository.save(employee4);
-        employeeRepository.save(employee5);
-        employeeRepository.save(employee6);
+        employeeRepository.save(aanis);
+        employeeRepository.save(tom);
+        employeeRepository.save(saima);
+        employeeRepository.save(emily);
+        employeeRepository.save(ryan);
+        employeeRepository.save(gisele);
 
-        employee1.setPosition(position);
-        employee2.setPosition(position);
+//        employee1.setPosition(position);
+//        employee2.setPosition(position);
 //        position.addEmployee(employee1);
 //        position.addEmployee(employee2);
         positionRepository.save(position);
