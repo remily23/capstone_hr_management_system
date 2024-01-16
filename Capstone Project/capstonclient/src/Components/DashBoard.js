@@ -28,7 +28,7 @@ const DashBoard = ({currentUser}) => {
   <h1>DashBoard page</h1> 
   <p>{`${greet}, ${currentUser.firstName} ${currentUser.lastName}!`}</p>
   </>
-
+ 
   
 )};
 
