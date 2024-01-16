@@ -33,8 +33,13 @@ public class EmployeeController {
         return new ResponseEntity<>(employeeService.addEmployee(employeeDTO), HttpStatus.CREATED);
     }
 
-    @PatchMapping (value = "/{id}")
+    @PutMapping (value = "/{id}")
     public ResponseEntity<Employee> updateEmployee(@RequestBody UpdateUserDTO updateUserDTO, @PathVariable Long id){
         return new ResponseEntity<>(employeeService.updateEmployee(id, updateUserDTO), HttpStatus.OK);
     }
+
+
+
+
+
 }

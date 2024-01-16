@@ -49,14 +49,31 @@ public class EmployeeService {
 
     public Employee updateEmployee(Long id, UpdateUserDTO updateUserDTO) {
         Employee employee = employeeRepository.findById(id).get();
-        employee.setFirstName(updateUserDTO.getFirstName());
-        employee.setLastName(updateUserDTO.getLastName());
-        employee.setEmail(updateUserDTO.getEmail());
-        employee.setDateOfBirth(updateUserDTO.getDateOfBirth());
-        employee.setAddress(updateUserDTO.getAddress());
-        employee.setPhoneNumber(updateUserDTO.getPhoneNumber());
-        employee.setProRota(updateUserDTO.getProRota());
-        employee.setSalary(updateUserDTO.getSalary());
+        if (updateUserDTO.getFirstName() != null) {
+            employee.setFirstName(updateUserDTO.getFirstName());
+        }
+        if (updateUserDTO.getLastName() != null) {
+            employee.setLastName(updateUserDTO.getLastName());
+        }
+        if (updateUserDTO.getEmail() != null) {
+            employee.setEmail(updateUserDTO.getEmail());
+        }
+        if (updateUserDTO.getDateOfBirth() != null) {
+            employee.setDateOfBirth(updateUserDTO.getDateOfBirth());
+        }
+        if (updateUserDTO.getAddress() != null) {
+            employee.setAddress(updateUserDTO.getAddress());
+        }
+        if (updateUserDTO.getPhoneNumber() != null) {
+            employee.setPhoneNumber(updateUserDTO.getPhoneNumber());
+        }
+        if (updateUserDTO.getProRota() != 0) {
+            employee.setProRota(updateUserDTO.getProRota());
+        }
+
+        if (updateUserDTO.getSalary() != 0) {
+            employee.setSalary(updateUserDTO.getSalary());
+        }
 
         employeeRepository.save(employee);
         return employee;
