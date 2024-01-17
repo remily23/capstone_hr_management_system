@@ -1,6 +1,11 @@
-
+import { useNavigate, Outlet } from 'react-router-dom';
 
 const ProfilePage = ({currentUser}) => {
+    const navigate = useNavigate();
+
+    const toUpdateEmployeeForm = () => {
+        navigate('/profile/updateDetails', {state: {currentUser}})
+    }
     return ( 
     <>
         <h3>Profile Page</h3>
@@ -11,9 +16,8 @@ const ProfilePage = ({currentUser}) => {
         <p>Address: {currentUser.address}</p>
         <p>Phone number: {currentUser.phoneNumber}</p>
         <p>Pro rota: {currentUser.proRota}</p>
-        <p>Salary: {currentUser.proRota}</p>
-        <button>Edit</button>
-
+        <p>Salary: {currentUser.salary}</p>
+        <button onClick={toUpdateEmployeeForm}>Edit</button>
         </>
      );
      

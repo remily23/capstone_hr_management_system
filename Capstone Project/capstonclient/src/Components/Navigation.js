@@ -7,16 +7,16 @@ const Navigation = () => {
       <nav>
         <ul>
           <button>
-            <Link to="/dashboard">Dashboard</Link>
+            <Link to="dashboard">Dashboard</Link>
           </button>
           <button>
-            <Link to="/newaccount">Create Account</Link>
+            <Link to="newaccount">Create Account</Link>
           </button>
           {/* <button>
             <Link to="/login">Sign-out</Link>
           </button> */}
           <button>
-            <Link to="/profile">Profile</Link>
+            <Link to="profile">Profile</Link>
           </button>
         </ul>
       </nav>
