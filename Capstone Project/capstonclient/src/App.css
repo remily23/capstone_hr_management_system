@@ -19,7 +19,7 @@ body{
   background-color: #EEE5E5;
 }
 
-
+/* ProfilePage.css */
 
 .profile-container {
   max-width: 600px;
@@ -29,7 +29,7 @@ body{
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  text-align: center; /* Center text within the container */
+  text-align: center; 
 }
 
 .profile-heading {
@@ -68,3 +68,54 @@ body{
   margin: auto; 
   display: block; 
 }
+
+
+/* UpdateEmployeeForm.css */
+
+.update-form-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.update-form-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.update-form-container form {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.update-form-container label {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.update-form-container input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.update-form-container input[type="submit"] {
+  background-color: #1976d2; 
+  color: #fff;
+  cursor: pointer;
+
+}
+
+.update-form-container input[type="submit"]:hover {
+  background-color: #135ba1; 
+}
+
+
+
