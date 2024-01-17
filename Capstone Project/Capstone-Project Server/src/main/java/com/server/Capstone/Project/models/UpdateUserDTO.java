@@ -66,7 +66,7 @@ public class UpdateUserDTO {
         return proRata;
     }
 
-    public void setProRota(int proRata) {
+    public void setProRata(int proRata) {
         this.proRata = proRata;
     }
 
