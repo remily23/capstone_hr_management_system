@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 const LoginForm = ({ listOfEmployees, setCurrentUser }) => {
   const navigate = useNavigate();
-  //let [currentUser,setCurrentUser] = useState({})
   const [stateLogin, setStateLogin] = useState({
     email: "",
     password: "",
@@ -16,9 +15,8 @@ const LoginForm = ({ listOfEmployees, setCurrentUser }) => {
     );
     if (foundEmployee) {
       alert("Login successful");
-      setCurrentUser (foundEmployee)
-      // navigate("/dashboard", {state:{name:currentUser[firstName]}});
-      navigate("/dashboard")
+      setCurrentUser(foundEmployee);
+      navigate("/dashboard");
     } else {
       alert("Email or password is not correct");
       setStateLogin({ email: "", password: "" });

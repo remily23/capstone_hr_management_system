@@ -1,6 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
 
-
 const Navigation = () => {
   return (
     <>
@@ -10,13 +9,13 @@ const Navigation = () => {
             <Link to="dashboard">Dashboard</Link>
           </button>
           <button>
+            <Link to="profile">Profile</Link>
+          </button>
+          <button>
             <Link to="newaccount">Create Account</Link>
           </button>
-          {/* <button>
-            <Link to="/login">Sign-out</Link>
-          </button> */}
           <button>
-            <Link to="profile">Profile</Link>
+            <Link to="/login">Sign-out</Link>
           </button>
         </ul>
       </nav>
