@@ -1,49 +1,117 @@
+import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 
 const UpdateEmployeeForm = ({ updateEmployee }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const employee = location.state.currentUser;
 
-    const navigate = useNavigate();
-    const location = useLocation();
-    const employee = location.state.currentUser;
+  const [employeeDetails, setEmployeeDetails] = useState(employee);
 
-    const [employeeDetails, setEmployeeDetails] = useState(employee);
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    updateEmployee(employee.employeeId, employeeDetails);
+    navigate('../profile');
+  };
 
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
-        updateEmployee(employee.employeeId, employeeDetails);
-        navigate("../profile");
-    }
+  const handleChange = (e) => {
+    const fieldName = e.target.name;
+    const fieldValue = e.target.value;
 
-    const handleChange = (e) => {
-        const fieldName = e.target.name;
-        const fieldValue = e.target.value;
+    setEmployeeDetails((prevDetails) => ({
+      ...prevDetails,
+      [fieldName]: fieldValue,
+    }));
+  };
 
-        setEmployeeDetails((prevDetails) => ({
-            ...prevDetails,
-            [fieldName]: fieldValue
-        }));
-
-        console.log(employeeDetails);
-    }
-
-    return (
-        <section className="update-form-container">
-            <h1>Update Form</h1>
-            <form onSubmit={handleFormSubmit}>
-                <label>First Name: </label>
-                <input type="text" name="firstName" onChange={handleChange} placeholder="Enter your first name" value={employeeDetails.firstName} />
-                <label>Last Name: </label><input type="text" onChange={handleChange} name="lastName" placeholder="Enter your last name" value={employeeDetails.lastName} />
-                <label>Email Address: </label><input type="email" onChange={handleChange} name="email" placeholder="Enter your email address" value={employeeDetails.email} />
-                <label>Date of Birth: </label><input type="date" onChange={handleChange} name="dateOfBirth" placeholder="Enter your date of birth" value={employeeDetails.dateOfBirth} />
-                <label>Address: </label><input type="text" onChange={handleChange} name="address" placeholder="Enter your address" value={employeeDetails.address} />
-                <label>Phone Number: </label><input type="tel" onChange={handleChange} name="phoneNumber" placeholder="Enter your phone number" value={employeeDetails.phoneNumber} />
-                <label>Pro Rota: </label><input type="text" onChange={handleChange} name="proRota" placeholder="Enter your pro rota" value={employeeDetails.proRota} />
-                <label>Salary: </label><input type="text" onChange={handleChange} name="salary" placeholder="Enter your salary" value={employeeDetails.salary} />
-                <input type="submit" value="Save" />
-            </form>
+  return (
+    <section className="update-form-container">
+      <h1>Update Form</h1>
+      <form onSubmit={handleFormSubmit} className="form-container">
+        <section className="form-row">
+          <label>First Name: </label>
+          <input
+            type="text"
+            name="firstName"
+            onChange={handleChange}
+            placeholder="Enter your first name"
+            value={employeeDetails.firstName}
+          />
         </section>
-    );
-}
+        <section className="form-row">
+          <label>Last Name: </label>
+          <input
+            type="text"
+            name="lastName"
+            onChange={handleChange}
+            placeholder="Enter your last name"
+            value={employeeDetails.lastName}
+          />
+        </section>
+        <section className="form-row">
+          <label>Email Address: </label>
+          <input
+            type="email"
+            name="email"
+            onChange={handleChange}
+            placeholder="Enter your email address"
+            value={employeeDetails.email}
+          />
+        </section>
+        <section className="form-row">
+          <label>Date of Birth: </label>
+          <input
+            type="date"
+            name="dateOfBirth"
+            onChange={handleChange}
+            placeholder="Enter your date of birth"
+            value={employeeDetails.dateOfBirth}
+          />
+        </section>
+        <section className="form-row">
+          <label>Address: </label>
+          <input
+            type="text"
+            name="address"
+            onChange={handleChange}
+            placeholder="Enter your address"
+            value={employeeDetails.address}
+          />
+        </section>
+        <section className="form-row">
+          <label>Phone Number: </label>
+          <input
+            type="tel"
+            name="phoneNumber"
+            onChange={handleChange}
+            placeholder="Enter your phone number"
+            value={employeeDetails.phoneNumber}
+          />
+        </section>
+        <section className="form-row">
+          <label>Pro Rota: </label>
+          <input
+            type="text"
+            name="proRota"
+            onChange={handleChange}
+            placeholder="Enter your pro rota"
+            value={employeeDetails.proRota}
+          />
+        </section>
+        <section className="form-row">
+          <label>Salary: </label>
+          <input
+            type="text"
+            name="salary"
+            onChange={handleChange}
+            placeholder="Enter your salary"
+            value={employeeDetails.salary}
+          />
+        </section>
+        <input type="submit" value="Save" />
+      </form>
+    </section>
+  );
+};
 
 export default UpdateEmployeeForm;
