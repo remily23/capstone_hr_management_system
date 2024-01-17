@@ -15,7 +15,44 @@ flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.create-account {
+.update-form-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: left; /* Align the form to the left */
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.form-container label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.form-container input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.create-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #1976D2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+
+/* .create-account {
   justify-content: center;
   display: flex;
   align-items: center;
@@ -27,10 +64,16 @@ flex-wrap: wrap;
   flex-direction: row;
   align-items: flex-start;
   margin-bottom: 5px;
-  margin-right: 10px;
+  margin-right: 50px;
   margin: 1em;
 }
 
+.create-account p {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  /* flex-direction: column; */
+} */
 
 h1{
   text-align: center;
@@ -44,7 +87,7 @@ body{
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
+  margin: 30px;
 }
 
 

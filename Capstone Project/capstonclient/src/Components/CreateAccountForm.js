@@ -50,38 +50,36 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
     }
     return (
         <>
-        
         <section className="create-account">
             <h2>Create Account</h2>
                 <form onSubmit={handleFormSubmit}>
-                        Access Level
+                        <section>Access Level
                             <select id="dropdown">
                                 <option>Admin</option>
                                 <option>Employee</option>
-                            </select>
+                            </select></section>
 
-                            <label>First Name: </label><input type="text" onChange={handleChange} name="firstName" placeholder="Enter your first name" value={stateEmployee.firstName} />
+                            <section><label>First Name: </label><input type="text" onChange={handleChange} name="firstName" placeholder="Enter your first name" value={stateEmployee.firstName} /></section>
 
-                            <label>Last Name: </label><input type="text" onChange={handleChange} name="lastName" placeholder="Enter your last name" value={stateEmployee.lastName} />
+                            <section><label>Last Name: </label><input type="text" onChange={handleChange} name="lastName" placeholder="Enter your last name" value={stateEmployee.lastName} /></section>
 
-                            <label>Email Address: </label><input type="email" onChange={handleChange} name="email" placeholder="Enter your email address" value={stateEmployee.email} />
+                            <section><label>Email Address: </label><input type="email" onChange={handleChange} name="email" placeholder="Enter your email address" value={stateEmployee.email} /></section>
 
-                            <label>Password: </label><input type="password" onChange={handleChange} name="password" placeholder="Enter your password" value={stateEmployee.password} />
+                            <section><label>Password: </label><input type="password" onChange={handleChange} name="password" placeholder="Enter your password" value={stateEmployee.password} /></section>
                             
-                            <label>Date of Birth: </label><input type="date" onChange={handleChange} name="dateOfBirth" placeholder="Enter your date of birth" value={stateEmployee.dateOfBirth} />
+                            <section><label>Date of Birth: </label><input type="date" onChange={handleChange} name="dateOfBirth" placeholder="Enter your date of birth" value={stateEmployee.dateOfBirth} /></section>
                             
-                            <label>Address: </label><input type="text" onChange={handleChange} name="address" placeholder="Enter your address" value={stateEmployee.address} />
+                            <section><label>Address: </label><input type="text" onChange={handleChange} name="address" placeholder="Enter your address" value={stateEmployee.address} /></section>
                             
-                            <label>Phone Number: </label><input type="tel" onChange={handleChange} name="phoneNumber" placeholder="Enter your phone number" value={stateEmployee.phoneNumber} />
+                            <section><label>Phone Number: </label><input type="tel" onChange={handleChange} name="phoneNumber" placeholder="Enter your phone number" value={stateEmployee.phoneNumber} /></section>
 
-                            <label>Pro Rota: </label><input type="text" onChange={handleChange} name="proRota" placeholder="Enter your pro rota" value={stateEmployee.proRota} />
+                            <section><label>Pro Rota: </label><input type="text" onChange={handleChange} name="proRota" placeholder="Enter your pro rota" value={stateEmployee.proRota} /></section>
 
-                           <label>Salary: </label><input type="text" onChange={handleChange} name="salary" placeholder="Enter your salary" value={stateEmployee.salary} />
+                            <section><label>Salary: </label><input type="text" onChange={handleChange} name="salary" placeholder="Enter your salary" value={stateEmployee.salary} /></section>
                             
-                            <input type="submit" value="Create" />
+                            <section><input type="submit" value="Create" /></section>
                 </form>
                 </section>
-
         </>
     );
 }
