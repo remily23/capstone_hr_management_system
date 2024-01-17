@@ -7,8 +7,8 @@ const ProfilePage = ({currentUser}) => {
         navigate('/profile/updateDetails', {state: {currentUser}})
     }
     return ( 
-    <>
-        <h3>Profile Page</h3>
+    <section className="profile-container">
+        <h3>My Profile</h3>
         <p>First name: {currentUser.firstName}</p>
         <p>Last name: {currentUser.lastName}</p>
         <p>Email: {currentUser.email}</p>
@@ -17,8 +17,8 @@ const ProfilePage = ({currentUser}) => {
         <p>Phone number: {currentUser.phoneNumber}</p>
         <p>Pro rota: {currentUser.proRota}</p>
         <p>Salary: {currentUser.salary}</p>
-        <button onClick={toUpdateEmployeeForm}>Edit</button>
-        </>
+        <button className="edit-button" onClick={toUpdateEmployeeForm}>Edit</button>
+        </section>
      );
      
 }
