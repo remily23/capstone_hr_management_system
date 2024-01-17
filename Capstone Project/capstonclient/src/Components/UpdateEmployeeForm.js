@@ -90,12 +90,12 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
           />
         </section>
         <section className="pro-rota">
-          <label>Pro Rota: </label>
+          <label>Pro Rata: </label>
           <input
             type="text"
             name="proRota"
             onChange={handleChange}
-            placeholder="Enter your pro rota"
+            placeholder="Enter your pro rata"
             value={employeeDetails.proRota}
           />
         </section>
