@@ -1,12 +1,19 @@
 .login {
  background-color: aquamarine;
  align-items: center;
- justify-content: center;
- display: flex;
+ /* justify-content: center; 
+ display: flex; 
 flex-direction: column;
-flex-wrap: wrap;
+flex-wrap: wrap; */
 height: 50px;
 }
+/* #login-form {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+} */
+
 
 body{
   background-color: #EEE5E5;
