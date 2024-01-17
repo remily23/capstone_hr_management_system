@@ -19,7 +19,7 @@ const ProfilePage = ({currentUser}) => {
         <p>Date of birth: {currentUser.dateOfBirth}</p>
         <p>Address: {currentUser.address}</p>
         <p>Phone number: {currentUser.phoneNumber}</p>
-        <p>Pro rota: {currentUser.proRota}</p>
+        <p>Pro rata: {currentUser.proRota}</p>
         <p>Salary: {currentUser.salary}</p>
         <button className="edit-button" onClick={toUpdateEmployeeForm}>Edit</button>
         </section>
