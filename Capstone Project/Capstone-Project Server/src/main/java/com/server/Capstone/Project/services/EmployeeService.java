@@ -36,7 +36,7 @@ public class EmployeeService {
                 employeeDTO.getDateOfBirth(),
                 employeeDTO.getAddress(),
                 employeeDTO.getPhoneNumber(),
-                employeeDTO.getProRota(),
+                employeeDTO.getProRata(),
                 employeeDTO.getSalary()
         );
         employeeRepository.save(employee);
@@ -67,8 +67,8 @@ public class EmployeeService {
         if (updateUserDTO.getPhoneNumber() != null) {
             employee.setPhoneNumber(updateUserDTO.getPhoneNumber());
         }
-        if (updateUserDTO.getProRota() != 0) {
-            employee.setProRota(updateUserDTO.getProRota());
+        if (updateUserDTO.getProRata() != 0) {
+            employee.setProRata(updateUserDTO.getProRata());
         }
 
         if (updateUserDTO.getSalary() != 0) {
