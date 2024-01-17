@@ -42,7 +42,7 @@ body{
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  text-align: left; /* Reset text alignment to left within the box */
+  text-align: left;
 }
 
 .profile-info {
@@ -62,4 +62,9 @@ body{
 
 .edit-button:hover {
   background-color: #1565c0;
+}
+
+.profile-image {
+  margin: auto; 
+  display: block; 
 }

@@ -1,4 +1,8 @@
 import { useNavigate, Outlet } from 'react-router-dom';
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+import stockimage from '../stockimage.jpeg'; 
+
 
 const ProfilePage = ({currentUser}) => {
     const navigate = useNavigate();
@@ -8,6 +12,7 @@ const ProfilePage = ({currentUser}) => {
     }
     return ( 
     <section className="profile-container">
+         <Avatar className="profile-image" src={stockimage} alt="stock img"  sx={{ width: 70, height: 70 }}/>
         <h3>My Profile</h3>
         <p>First name: {currentUser.firstName}</p>
         <p>Last name: {currentUser.lastName}</p>
