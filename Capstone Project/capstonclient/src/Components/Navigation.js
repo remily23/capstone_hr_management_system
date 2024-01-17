@@ -1,25 +1,13 @@
+import React from "react";
 import { Link, Outlet } from "react-router-dom";
-
+import SideBar from "./SideBar";
 const Navigation = () => {
   return (
     <>
       <nav>
-        <ul>
-          <button>
-            <Link to="dashboard">Dashboard</Link>
-          </button>
-          <button>
-            <Link to="profile">Profile</Link>
-          </button>
-          <button>
-            <Link to="newaccount">Create Account</Link>
-          </button>
-          <button>
-            <Link to="/login">Sign-out</Link>
-          </button>
-        </ul>
+        <SideBar />
+        <Outlet />
       </nav>
-      <Outlet />
     </>
   );
 };
