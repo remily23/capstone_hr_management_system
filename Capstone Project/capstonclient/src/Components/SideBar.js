@@ -5,12 +5,12 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { Link } from "react-router-dom";
-import MenuIcon from '@mui/icons-material/Menu';
-import { Avatar, Button } from "@mui/material";
-import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
-import LogoutIcon from '@mui/icons-material/Logout';
-import HomeIcon from '@mui/icons-material/Home';
-import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import MenuIcon from "@mui/icons-material/Menu";
+import { Avatar, Button, CssBaseline, Typography } from "@mui/material";
+import HomeIcon from "@mui/icons-material/Home";
+import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import LogoutIcon from "@mui/icons-material/Logout";
+import PersonAddIcon from "@mui/icons-material/PersonAdd";
 
 const SideBar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -27,25 +27,38 @@ const SideBar = () => {
   ];
 
   return (
-    <div style={{ position: "fixed", left: 0, top: 0 }}>
-      <Button onClick={toggleDrawer(true)} startIcon={<MenuIcon />}>
-        Menu
-      </Button>
-      <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
-        <List>
-          {menuItems.map((item, index) => (
-            <ListItem key={index} button onClick={toggleDrawer(false)}>
-              <ListItemButton>
-                <Avatar>{item.icon}</Avatar>
-                <Link to={item.link} style={{ textDecoration: 'none' }}>
-                  <ListItemText primary={item.text} />
-                </Link>
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
-    </div>
+    <>
+      <CssBaseline />
+      <div style={{ position: "fixed", left: 0, top: 0 }}>
+        <Button
+          onClick={toggleDrawer(true)}
+          startIcon={<MenuIcon />}
+          variant="contained"
+          color="primary"
+        >
+          Menu
+        </Button>
+        <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
+          <List>
+            {menuItems.map((item, index) => (
+              <ListItem key={index} button onClick={toggleDrawer(false)}>
+                <ListItemButton>
+                  <Avatar sx={{ bgcolor: "secondary.main", mr: 2 }}>
+                    {item.icon}
+                  </Avatar>
+                  <Link
+                    to={item.link}
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    <ListItemText primary={item.text} />
+                  </Link>
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </Drawer>
+      </div>
+    </>
   );
 };
 
