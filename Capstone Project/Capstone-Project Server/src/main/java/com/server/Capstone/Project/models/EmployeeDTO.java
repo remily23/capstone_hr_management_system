@@ -74,8 +74,8 @@ public class EmployeeDTO {
         return proRata;
     }
 
-    public void setProRata(int proRota) {
-        this.proRata = proRota;
+    public void setProRata(int proRata) {
+        this.proRata = proRata;
     }
 
     public int getSalary() {
