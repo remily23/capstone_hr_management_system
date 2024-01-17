@@ -47,7 +47,7 @@ public class Employee {
                     String dateOfBirth,
                     String address,
                     String phoneNumber,
-                    int proRota,
+                    int proRata,
                     int salary
                     ) {
         this.firstName = firstName;
@@ -57,7 +57,7 @@ public class Employee {
         this.dateOfBirth = dateOfBirth;
         this.address = address;
         this.phoneNumber = phoneNumber;
-        this.proRata = proRota;
+        this.proRata = proRata;
         this.salary = salary;
     }
 
@@ -140,8 +140,8 @@ public class Employee {
         this.phoneNumber = phoneNumber;
     }
 
-    public void setProRata(int proRota) {
-        this.proRata = proRota;
+    public void setProRata(int proRata) {
+        this.proRata = proRata;
     }
 
     public void setSalary(int salary) {
