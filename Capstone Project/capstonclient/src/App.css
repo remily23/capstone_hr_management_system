@@ -32,23 +32,6 @@ body{
   text-align: center; 
 }
 
-.profile-heading {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.profile-box {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  text-align: left;
-}
-
-.profile-info {
-  font-size: 16px;
-}
-
 .edit-button {
   margin-top: 10px;
   padding: 10px 20px;
