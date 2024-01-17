@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
+
 const UpdateEmployeeForm = ({ updateEmployee }) => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -28,7 +29,7 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
     <section className="update-form-container">
       <h1>Update your details</h1>
       <form onSubmit={handleFormSubmit} className="form-container">
-        <section className="form-row">
+        <section className="first-name">
           <label>First Name: </label>
           <input
             type="text"
@@ -38,7 +39,7 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
             value={employeeDetails.firstName}
           />
         </section>
-        <section className="form-row">
+        <section className="last-name">
           <label>Last Name: </label>
           <input
             type="text"
@@ -48,7 +49,7 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
             value={employeeDetails.lastName}
           />
         </section>
-        <section className="form-row">
+        <section className="email">
           <label>Email Address: </label>
           <input
             type="email"
@@ -58,7 +59,7 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
             value={employeeDetails.email}
           />
         </section>
-        <section className="form-row">
+        <section className="dob">
           <label>Date of Birth: </label>
           <input
             type="date"
@@ -68,7 +69,7 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
             value={employeeDetails.dateOfBirth}
           />
         </section>
-        <section className="form-row">
+        <section className="address">
           <label>Address: </label>
           <input
             type="text"
@@ -78,7 +79,7 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
             value={employeeDetails.address}
           />
         </section>
-        <section className="form-row">
+        <section className="phone-number">
           <label>Phone Number: </label>
           <input
             type="tel"
@@ -88,7 +89,7 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
             value={employeeDetails.phoneNumber}
           />
         </section>
-        <section className="form-row">
+        <section className="pro-rota">
           <label>Pro Rota: </label>
           <input
             type="text"
@@ -98,7 +99,7 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
             value={employeeDetails.proRota}
           />
         </section>
-        <section className="form-row">
+        <section className="salary">
           <label>Salary: </label>
           <input
             type="text"
@@ -109,14 +110,10 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
           />
         </section>
       </form>
-      <section className="save-button">
-        <input type="submit" value="Save" />
+      <section className='save-button-container'>
+        <input type="submit" value="Save" className="save-button" onClick={handleFormSubmit}/>
         </section>
-   
     </section>
-    
-
-    
   );
 };
 

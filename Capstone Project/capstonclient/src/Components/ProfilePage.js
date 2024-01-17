@@ -1,6 +1,5 @@
 import { useNavigate, Outlet } from 'react-router-dom';
 import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
 import stockimage from '../stockimage.jpeg'; 
 
 
@@ -24,6 +23,7 @@ const ProfilePage = ({currentUser}) => {
         <p>Salary: {currentUser.salary}</p>
         <button className="edit-button" onClick={toUpdateEmployeeForm}>Edit</button>
         </section>
+        
      );
      
 }
