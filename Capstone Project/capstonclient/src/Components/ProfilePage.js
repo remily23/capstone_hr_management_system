@@ -1,4 +1,6 @@
 import { useNavigate, Outlet } from 'react-router-dom';
+import { Alert, Stack } from "@mui/material";
+import AlertTitle from '@mui/material/AlertTitle';
 
 const ProfilePage = ({currentUser}) => {
     const navigate = useNavigate();
@@ -18,6 +20,12 @@ const ProfilePage = ({currentUser}) => {
         <p>Pro rota: {currentUser.proRota}</p>
         <p>Salary: {currentUser.salary}</p>
         <button onClick={toUpdateEmployeeForm}>Edit</button>
+        <Stack sx={{ width: '100%' }} spacing={2}>
+        <Alert severity="success">
+          <AlertTitle>Success</AlertTitle>
+          Account deleted
+        </Alert>
+      </Stack>
         </>
      );
      

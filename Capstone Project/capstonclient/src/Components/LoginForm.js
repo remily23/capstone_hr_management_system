@@ -92,7 +92,7 @@ const LoginForm = ({ listOfEmployees, setCurrentUser }) => {
             onChange={handleChange}
             value={stateLogin.password}
           />
-          
+
           <Button
             type="submit"
             fullWidth
@@ -108,3 +108,5 @@ const LoginForm = ({ listOfEmployees, setCurrentUser }) => {
 };
 
 export default LoginForm;
+
+

@@ -1,5 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { Alert, Stack } from "@mui/material";
+import AlertTitle from '@mui/material/AlertTitle';
 
 const UpdateEmployeeForm = ({ updateEmployee }) => {
 
@@ -42,6 +44,16 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
                 <label>Salary: </label><input type="text" onChange={handleChange} name="salary" placeholder="Enter your salary" value={employeeDetails.salary} />
                 <input type="submit" value="Save" />
             </form>
+            <Stack sx={{ width: '100%' }} spacing={2}>
+                <Alert severity="success">
+                    <AlertTitle>Success</AlertTitle>
+                    Account updated
+                </Alert>
+                <Alert severity="error">
+                    <AlertTitle>Error</AlertTitle>
+                    Information entered is not correct
+                </Alert>
+            </Stack>
         </>
     );
 }
