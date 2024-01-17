@@ -7,20 +7,11 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
     const location = useLocation();
     const employee = location.state.currentUser;
 
-    const [employeeDetails, setEmployeeDetails] = useState({
-        firstName: employee.firstName,
-        lastName: employee.lastName,
-        email: employee.email,
-        dateOfBirth: employee.dateOfBirth,
-        address: employee.address,
-        phoneNumber: employee.phoneNumber,
-        proRota: employee.proRota,
-        salary: employee.salary
-    });
+    const [employeeDetails, setEmployeeDetails] = useState(employee);
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        updateEmployee(employee.id, employeeDetails);
+        updateEmployee(employee.employeeId, employeeDetails);
         navigate("../profile");
     }
 

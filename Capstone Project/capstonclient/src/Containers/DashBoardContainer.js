@@ -36,6 +36,7 @@ const DashBoardContainer = () => {
       });
       const updateDetails = await response.json();
       setListOfEmployees([...listOfEmployees, updateDetails]);
+      setCurrentUser(updateDetails);
    };
 
    useEffect(() => {
