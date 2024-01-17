@@ -26,7 +26,7 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
 
   return (
     <section className="update-form-container">
-      <h1>Update Form</h1>
+      <h1>Update your details</h1>
       <form onSubmit={handleFormSubmit} className="form-container">
         <section className="form-row">
           <label>First Name: </label>
@@ -108,9 +108,15 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
             value={employeeDetails.salary}
           />
         </section>
-        <input type="submit" value="Save" />
       </form>
+      <section className="save-button">
+        <input type="submit" value="Save" />
+        </section>
+   
     </section>
+    
+
+    
   );
 };
 

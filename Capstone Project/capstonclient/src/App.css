@@ -24,7 +24,7 @@ body{
 .profile-container {
   max-width: 600px;
   margin: auto;
-  padding: 20px;
+  padding: 40px;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -54,10 +54,11 @@ body{
 
 
 /* UpdateEmployeeForm */
+
 .update-form-container {
   max-width: 600px;
   margin: auto;
-  padding: 20px;
+  padding: 40px;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -72,7 +73,7 @@ body{
 }
 
 .form-container label {
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 5px;
 }
 
@@ -83,4 +84,22 @@ body{
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+
+.save-button {
+  margin-top: 10px;
+  padding: 50px 30px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  text-decoration: none; 
+}
+
+.update-form-container h1 {
+  margin-bottom: 50px; 
+  text-align: center;
+}
+
 
