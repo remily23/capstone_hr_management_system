@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Avatar from '@mui/material/Avatar';
+import LockIcon from '@mui/icons-material/Lock';
+
 const LoginForm = ({ listOfEmployees, setCurrentUser }) => {
   const navigate = useNavigate();
   const [stateLogin, setStateLogin] = useState({
@@ -29,24 +32,30 @@ const LoginForm = ({ listOfEmployees, setCurrentUser }) => {
     setStateLogin(copiedEmployee);
   };
   return (
-    <form onSubmit={handleFormSubmit}>
-      <h2>Login</h2>
-      <label>Email: </label>
-      <input
-        name="email"
-        type="email"
-        onChange={handleChange}
-        value={stateLogin.email}
-      />
-      <label>Password: </label>
-      <input
-        name="password"
-        type="password"
-        onChange={handleChange}
-        value={stateLogin.password}
-      />
-      <input type="submit" value="Sign in" />
-    </form>
+    <section className="login">
+      <form onSubmit={handleFormSubmit} id="login-form">
+        <Avatar> <LockIcon/></Avatar>
+        <h2>Login</h2>
+        <label htmlFor="email">Email: </label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          onChange={handleChange}
+          value={stateLogin.email}
+        />
+        <label htmlFor="password">Password: </label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          onChange={handleChange}
+          value={stateLogin.password}
+        />
+        <input type="submit" value="Sign in" id="signin-button" />
+      </form>
+    </section>
+
   );
 };
 export default LoginForm;
