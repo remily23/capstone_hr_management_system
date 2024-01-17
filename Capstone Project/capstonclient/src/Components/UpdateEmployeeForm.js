@@ -95,7 +95,7 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
             type="text"
             name="proRota"
             onChange={handleChange}
-            placeholder="Enter your pro rata"
+            placeholder="Enter your Pro Rata"
             value={employeeDetails.proRota}
           />
         </section>

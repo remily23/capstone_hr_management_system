@@ -13,13 +13,13 @@ const ProfilePage = ({currentUser}) => {
     <section className="profile-container">
          <Avatar className="profile-image" src={stockimage} alt="stock img"  sx={{ width: 70, height: 70 }}/>
         <h3>My Profile</h3>
-        <p>First name: {currentUser.firstName}</p>
-        <p>Last name: {currentUser.lastName}</p>
+        <p>First Name: {currentUser.firstName}</p>
+        <p>Last Name: {currentUser.lastName}</p>
         <p>Email: {currentUser.email}</p>
-        <p>Date of birth: {currentUser.dateOfBirth}</p>
+        <p>Date of Birth: {currentUser.dateOfBirth}</p>
         <p>Address: {currentUser.address}</p>
-        <p>Phone number: {currentUser.phoneNumber}</p>
-        <p>Pro rata: {currentUser.proRota}</p>
+        <p>Phone Number: {currentUser.phoneNumber}</p>
+        <p>Pro Rata: {currentUser.proRota}</p>
         <p>Salary: {currentUser.salary}</p>
         <button className="edit-button" onClick={toUpdateEmployeeForm}>Edit</button>
         </section>
