@@ -91,6 +91,7 @@ With the digitisation of all existing systems due to the recent business expansi
 ## 4.2. UML Diagram
 
 ## 4.3. ER Diagram
+![ER Diagram](main url)
 
 ## 4.4 Persona Diagram
 
