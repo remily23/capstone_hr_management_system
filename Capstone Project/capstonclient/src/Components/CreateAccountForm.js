@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { useNavigate, createBrowserRouter } from "react-router-dom";
+import { Alert, Stack } from "@mui/material";
+import AlertTitle from '@mui/material/AlertTitle';
+
 
 const CreateAccountForm = ({ currentUser, postEmployee }) => {
     const [stateEmployee, setStateEmployee] = useState({
@@ -10,7 +13,7 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
         dateOfBirth: "",
         address: "",
         phoneNumber: "",
-        proRota: "",
+        proRata: "",
         salary: ""
     });
     const handleFormSubmit = (e) => {
@@ -23,11 +26,12 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
             stateEmployee.dateOfBirth === "" ||
             stateEmployee.address === "" ||
             stateEmployee.phoneNumber === "" ||
-            stateEmployee.proRota === "" ||
+            stateEmployee.proRata === "" ||
             stateEmployee.salary === ""
         ) {
             alert("Please fill in the sign up form")
             return
+
         }
         postEmployee(stateEmployee)
         setStateEmployee({
@@ -38,7 +42,7 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
             dateOfBirth: "",
             address: "",
             phoneNumber: "",
-            proRota: "",
+            proRata: "",
             salary: ""
         })
     }
@@ -53,6 +57,7 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
         <section className="create-account">
             <h2>Create Account</h2>
                 <form onSubmit={handleFormSubmit}>
+
                         <section className="access-level-dropdown">Access Level:
                             <select id="dropdown">
                                 <option>Admin</option>
@@ -82,7 +87,23 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
                 </form>
                 <section className="create-account-form-button"><input type="submit" value="Create Account" /></section>
                 </section>
+
+                <Stack sx={{ width: '100%' }} spacing={2}>
+                <Alert severity="success">
+                    <AlertTitle>Success</AlertTitle>
+                    Account created successfully
+                </Alert>
+                <Alert severity="info">
+                    <AlertTitle>Info</AlertTitle>
+                    There are missing fields 
+                </Alert>
+                <Alert severity="error">
+                    <AlertTitle>Error</AlertTitle>
+                    Information entered is not correct
+                </Alert>
+            </Stack>
         </>
     );
 }
 export default CreateAccountForm;
+

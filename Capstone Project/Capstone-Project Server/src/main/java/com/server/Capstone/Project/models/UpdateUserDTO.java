@@ -7,7 +7,7 @@ public class UpdateUserDTO {
     private String dateOfBirth;
     private String address;
     private String phoneNumber;
-    private int proRota;
+    private int proRata;
     private int salary;
 
     public UpdateUserDTO(){
@@ -62,12 +62,12 @@ public class UpdateUserDTO {
         this.phoneNumber = phoneNumber;
     }
 
-    public int getProRota() {
-        return proRota;
+    public int getProRata() {
+        return proRata;
     }
 
-    public void setProRota(int proRota) {
-        this.proRota = proRota;
+    public void setProRata(int proRata) {
+        this.proRata = proRata;
     }
 
     public int getSalary() {

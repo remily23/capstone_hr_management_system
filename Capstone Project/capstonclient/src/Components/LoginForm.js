@@ -1,43 +1,45 @@
-import React from 'react';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import Stack from '@mui/material/Stack';
-import Alert from '@mui/material/Alert';
-
+import React from "react";
+import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
+import TextField from "@mui/material/TextField";
+import Box from "@mui/material/Box";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import Stack from "@mui/material/Stack";
+import Alert from "@mui/material/Alert";
 
 const LoginForm = ({ listOfEmployees, setCurrentUser }) => {
   const navigate = useNavigate();
   const [stateLogin, setStateLogin] = useState({
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   });
+
+const location = useLocation();
+// const user =location.state.currentUser;
 
   const [error, setError] = useState(null);
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
+    // window.location.reload();
     const foundEmployee = listOfEmployees.find(
-      (employee) =>
-        employee.email === stateLogin.email &&
-        employee.password === stateLogin.password
+      (employee) => employee.email === stateLogin.email
     );
-    if (foundEmployee) {
-      setCurrentUser(foundEmployee);
-      navigate('/dashboard');
+    if (!foundEmployee) {
+      setError("User is not found");
+    } else if (foundEmployee.password !== stateLogin.password) {
+      setError("User exists but the password is incorrect!");
+      setStateLogin({ email: "", password: "" });
     } else {
-      setError("Email or Password is not correct!");
-      setStateLogin({ email: '', password: '' });
+      setCurrentUser(foundEmployee);
+      navigate("/dashboard");
     }
   };
-
   const handleChange = (event) => {
     let fieldName = event.target.name;
     let copiedEmployee = { ...stateLogin };
@@ -51,12 +53,12 @@ const LoginForm = ({ listOfEmployees, setCurrentUser }) => {
       <Box
         sx={{
           marginTop: 8,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
         }}
       >
-        <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+        <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
@@ -67,7 +69,12 @@ const LoginForm = ({ listOfEmployees, setCurrentUser }) => {
             <Alert severity="error">{error}</Alert>
           </Stack>
         )}
-        <Box component="form" onSubmit={handleFormSubmit} noValidate sx={{ mt: 1 }}>
+        <Box
+          component="form"
+          onSubmit={handleFormSubmit}
+          noValidate
+          sx={{ mt: 1 }}
+        >
           <TextField
             margin="normal"
             required
@@ -92,7 +99,7 @@ const LoginForm = ({ listOfEmployees, setCurrentUser }) => {
             onChange={handleChange}
             value={stateLogin.password}
           />
-          
+
           <Button
             type="submit"
             fullWidth
