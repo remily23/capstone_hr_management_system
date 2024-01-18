@@ -1,14 +1,18 @@
 import { useNavigate, Outlet } from 'react-router-dom';
+import { Alert, Stack } from "@mui/material";
+import AlertTitle from '@mui/material/AlertTitle';
 import Avatar from '@mui/material/Avatar';
 import stockimage from '../stockimage.jpeg'; 
 
 
-const ProfilePage = ({currentUser}) => {
+const ProfilePage = ({ currentUser }) => {
     const navigate = useNavigate();
 
     const toUpdateEmployeeForm = () => {
-        navigate('/profile/updateDetails', {state: {currentUser}})
+        navigate('/profile/updateDetails', { state: { currentUser } })
     }
+ 
+
     return ( 
     <section className="profile-container">
          <Avatar className="profile-image" src={stockimage} alt="stock img"  sx={{ width: 70, height: 70 }}/>
@@ -22,10 +26,16 @@ const ProfilePage = ({currentUser}) => {
         <p>Pro Rata: {currentUser.proRota}</p>
         <p>Salary: {currentUser.salary}</p>
         <button className="edit-button" onClick={toUpdateEmployeeForm}>Edit</button>
+        <Stack sx={{ width: '100%' }} spacing={2}>
+                <Alert severity="success">
+                    <AlertTitle>Success</AlertTitle>
+                    Account deleted
+                </Alert>
+            </Stack>
         </section>
         
      );
      
 }
- 
+
 export default ProfilePage;

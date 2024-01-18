@@ -24,7 +24,13 @@ body{
   background-color: #EEE5E5;
 }
 
+.navigation{
+  margin-right: 5px;
+}
+
+
 /* ProfilePage */
+
 
 .profile-container {
   max-width: 600px;

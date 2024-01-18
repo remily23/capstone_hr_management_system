@@ -1,30 +1,34 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { Alert, Stack } from "@mui/material";
+import AlertTitle from '@mui/material/AlertTitle';
 
 
 const UpdateEmployeeForm = ({ updateEmployee }) => {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const employee = location.state.currentUser;
+const navigate = useNavigate();
+    const location = useLocation();
+    const employee = location.state.currentUser;
 
-  const [employeeDetails, setEmployeeDetails] = useState(employee);
+    const [employeeDetails, setEmployeeDetails] = useState(employee);
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    updateEmployee(employee.employeeId, employeeDetails);
-    navigate('../profile');
-  };
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+        updateEmployee(employee.employeeId, employeeDetails);
+        navigate("../profile");
+    }
 
-  const handleChange = (e) => {
-    const fieldName = e.target.name;
-    const fieldValue = e.target.value;
+    const handleChange = (e) => {
+        const fieldName = e.target.name;
+        const fieldValue = e.target.value;
 
-    setEmployeeDetails((prevDetails) => ({
-      ...prevDetails,
-      [fieldName]: fieldValue,
-    }));
-  };
+        setEmployeeDetails((prevDetails) => ({
+            ...prevDetails,
+            [fieldName]: fieldValue
+        }));
 
+        console.log(employeeDetails);
+    }
   return (
     <section className="update-form-container">
       <h1>Update your details</h1>
@@ -114,6 +118,16 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
         <input type="submit" value="Save" className="save-button" onClick={handleFormSubmit}/>
         </section>
     </section>
+    <Stack sx={{ width: '100%' }} spacing={2}>
+                <Alert severity="success">
+                    <AlertTitle>Success</AlertTitle>
+                    Account updated
+                </Alert>
+                <Alert severity="error">
+                    <AlertTitle>Error</AlertTitle>
+                    Information entered is not correct
+                </Alert>
+            </Stack>
   );
 };
 
