@@ -30,7 +30,7 @@
 6. API Routes
 
 ## 1. Introduction
-The best HR system fostering Agile talent Ecosystems! 
+The best HR management tool fostering Agile talent Ecosystems! 
 
 ## 1.1. Business Scenario
 RainforestRetail currently manage employee information with a hard-copy paper record system at head office. RainforestRetail are experiencing challenges keeping employee records up to date. Maintaining these records is becoming a time-consuming and error-prone process.
