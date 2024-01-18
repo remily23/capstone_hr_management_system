@@ -3,6 +3,9 @@ import { useNavigate, createBrowserRouter } from "react-router-dom";
 import { Alert, Stack } from "@mui/material";
 import AlertTitle from '@mui/material/AlertTitle';
 const CreateAccountForm = ({ currentUser, postEmployee }) => {
+    const [errorMessage, setErrorMessage] = useState(null);
+    const [successMessage, setSuccessMessage] = useState(null);
+
     const [stateEmployee, setStateEmployee] = useState({
         firstName: "",
         lastName: "",
@@ -27,10 +30,13 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
             stateEmployee.proRata === "" ||
             stateEmployee.salary === ""
         ) {
-            alert("Please fill in the sign up form")
-            return
+            setErrorMessage("Information entered is not correct") 
+            setSuccessMessage(null);
+        } else { 
+            setSuccessMessage("Account created successfully")
+            setErrorMessage(null);
         }
-        console.log(stateEmployee)
+        
         postEmployee(stateEmployee)
         setStateEmployee({
             firstName: "",
@@ -44,6 +50,7 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
             salary: ""
         })
     }
+
     const handleChange = (e) => {
         let fieldName = e.target.name;
         let copiedEmployee = { ...stateEmployee };
@@ -72,22 +79,25 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
                             <section><label>Salary: </label><input type="text" onChange={handleChange} name="salary" placeholder="Enter your salary" value={stateEmployee.salary} /></section>
                             <section className="create-account-form-button"><input type="submit" value="Create Account" /></section>
                 </section>
+                {successMessage && (        
+                    <Stack>
+                        <Alert severity="success">
+                        {successMessage}
+                        </Alert>
+                    </Stack>
+                )}
+                {errorMessage && (        
+                    <Stack>
+                        <Alert severity="info">
+                        {errorMessage}
+                        </Alert>
+                    </Stack>
+                )}
                 </form>
+
                 </section>
-                {/* <Stack sx={{ width: '100%' }} spacing={2}>
-                <Alert severity="success">
-                    <AlertTitle>Success</AlertTitle>
-                    Account created successfully
-                </Alert>
-                <Alert severity="info">
-                    <AlertTitle>Info</AlertTitle>
-                    There are missing fields
-                </Alert>
-                <Alert severity="error">
-                    <AlertTitle>Error</AlertTitle>
-                    Information entered is not correct
-                </Alert>
-            </Stack> */}
+
+                
         </>
     );
 }
