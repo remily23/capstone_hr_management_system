@@ -1,25 +1,18 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Alert, Stack } from "@mui/material";
-import AlertTitle from "@mui/material/AlertTitle";
-
 const UpdateEmployeeForm = ({ updateEmployee }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const employee = location.state.currentUser;
-
   const [employeeDetails, setEmployeeDetails] = useState(employee);
-
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    updateEmployee(employee.employeeId, employeeDetails);
+    updateEmployee(employee.id, employeeDetails);
     navigate("../profile");
   };
-
   const handleChange = (e) => {
     const fieldName = e.target.name;
     const fieldValue = e.target.value;
-
     setEmployeeDetails((prevDetails) => ({
       ...prevDetails,
       [fieldName]: fieldValue,
@@ -110,28 +103,17 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
               value={employeeDetails.salary}
             />
           </section>
-        </form>
-        <section className="save-button-container">
+          <section className="save-button-container">
           <input
             type="submit"
             value="Save"
             className="save-button"
             onClick={handleFormSubmit}
           />
-        </section>
+          </section>
+        </form>
       </section>
-      <Stack sx={{ width: "100%" }} spacing={2}>
-        <Alert severity="success">
-          <AlertTitle>Success</AlertTitle>
-          Account updated
-        </Alert>
-        <Alert severity="error">
-          <AlertTitle>Error</AlertTitle>
-          Information entered is not correct
-        </Alert>
-      </Stack>
     </>
   );
 };
-
 export default UpdateEmployeeForm;
