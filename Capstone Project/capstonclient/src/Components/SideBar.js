@@ -16,14 +16,11 @@ import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LiveHelpIcon from "@mui/icons-material/LiveHelp";
-
 const SideBar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
-
   const toggleDrawer = (open) => () => {
     setDrawerOpen(open);
   };
-
   const menuItems = [
     { text: "Dashboard", link: "/dashboard", icon: <HomeIcon /> },
     { text: "Profile", link: "/profile", icon: <PersonOutlineIcon /> },
@@ -39,7 +36,6 @@ const SideBar = () => {
     { text: "FAQs", link: "/dashboard", icon: <LiveHelpIcon /> },
     { text: "Sign-out", link: "/login", icon: <LogoutIcon /> },
   ];
-
   return (
     <>
       <CssBaseline />
@@ -75,5 +71,4 @@ const SideBar = () => {
     </>
   );
 };
-
 export default SideBar;
