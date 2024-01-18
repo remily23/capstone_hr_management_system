@@ -7,11 +7,7 @@
 - GitHub: [Saima](https://github.com/saima2210) 
 - GitHub: [Ryan](https://github.com/RyanNekadio)
 
-## Table of Contents 📜 - ***section links TBA
-- [Capstone Project - Group 4: HireHues HR Management System](#capstone-project---group-4-hirehues-hr-management-system)
-  - [👥🎸 Developer Team 👥🎸](#-developer-team-)
-  - [Table of Contents 📜 - \*\*\*section links TBA](#table-of-contents----section-links-tba)
-  - [1. Introduction](#1-introduction)
+## Table of Contents 📜
   - [1.1. Business Scenario](#11-business-scenario)
   - [1.1. Business Case](#11-business-case)
   - [1.2 Risk Register](#12-risk-register)
