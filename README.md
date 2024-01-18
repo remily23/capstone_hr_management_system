@@ -8,6 +8,7 @@
 - GitHub: [Ryan](https://github.com/RyanNekadio)
 
 ## Table of Contents 📜
+  - [1. Introduction](#1-introduction)
   - [1.1. Business Scenario](#11-business-scenario)
   - [1.1. Business Case](#11-business-case)
   - [1.2 Risk Register](#12-risk-register)
