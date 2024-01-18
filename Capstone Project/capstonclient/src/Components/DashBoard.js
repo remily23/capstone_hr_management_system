@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import * as React from 'react';
+import Graph from "./Graph";
+
 
 const DashBoard = ({ currentUser }) => {
   // const location = useLocation()
@@ -25,8 +28,16 @@ const DashBoard = ({ currentUser }) => {
     <>
       <h2>Home Page</h2>
       <p>{`${greet}, ${currentUser.firstName} ${currentUser.lastName}!`}</p>
+      <Graph />
+
     </>
   );
 };
 
 export default DashBoard;
+
+
+
+
+
+
