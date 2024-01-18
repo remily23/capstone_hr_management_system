@@ -77,7 +77,7 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
                             <section><label>Phone Number: </label><input type="tel" onChange={handleChange} name="phoneNumber" placeholder="Enter your phone number" value={stateEmployee.phoneNumber} /></section>
                             <section><label>Pro Rata: </label><input type="text" onChange={handleChange} name="proRata" placeholder="Enter your pro rata" value={stateEmployee.proRata} /></section>
                             <section><label>Salary: </label><input type="text" onChange={handleChange} name="salary" placeholder="Enter your salary" value={stateEmployee.salary} /></section>
-                            <section className="create-account-form-button"><input type="submit" value="Create Account" /></section>
+                            <section className="create-account-container"><input className = "create-account-button" type="submit" value="Create Account" /></section>
                 </section>
                 {successMessage && (        
                     <Stack>
