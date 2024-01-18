@@ -33,6 +33,7 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
             return
 
         }
+        console.log(stateEmployee)
         postEmployee(stateEmployee)
         setStateEmployee({
             firstName: "",
@@ -82,13 +83,14 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
                             <section><label>Pro Rata: </label><input type="text" onChange={handleChange} name="proRata" placeholder="Enter your pro rata" value={stateEmployee.proRata} /></section>
 
                             <section><label>Salary: </label><input type="text" onChange={handleChange} name="salary" placeholder="Enter your salary" value={stateEmployee.salary} /></section>
+                            <section className="create-account-form-button"><input type="submit" value="Create Account" /></section>
                             
                 </section>            
                 </form>
-                <section className="create-account-form-button"><input type="submit" value="Create Account" /></section>
+                
                 </section>
 
-                <Stack sx={{ width: '100%' }} spacing={2}>
+                {/* <Stack sx={{ width: '100%' }} spacing={2}>
                 <Alert severity="success">
                     <AlertTitle>Success</AlertTitle>
                     Account created successfully
@@ -101,7 +103,7 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
                     <AlertTitle>Error</AlertTitle>
                     Information entered is not correct
                 </Alert>
-            </Stack>
+            </Stack> */}
         </>
     );
 }
