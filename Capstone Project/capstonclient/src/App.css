@@ -24,6 +24,97 @@ body{
   background-color: #EEE5E5;
 }
 
+/* ProfilePage */
+
+.profile-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center; 
+}
+
+.edit-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.edit-button:hover {
+  background-color: #1565c0;
+}
+
+.profile-image {
+  margin: auto; 
+  display: block; 
+}
 
 
+/* UpdateEmployeeForm */
+
+.update-form-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: left;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  position: relative;
+}
+
+.form-container label {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+
+.form-container input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.save-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+
+.save-button {
+  padding: 10px 20px;
+  background-color: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.save-button:hover {
+  background-color: #1565c0;
+}
+
+.update-form-container h1 {
+  margin-bottom: 50px;
+  text-align: center;
+}
 

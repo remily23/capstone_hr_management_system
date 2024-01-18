@@ -10,7 +10,7 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
         dateOfBirth: "",
         address: "",
         phoneNumber: "",
-        proRota: "",
+        proRata: "",
         salary: ""
     });
     const handleFormSubmit = (e) => {
@@ -23,7 +23,7 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
             stateEmployee.dateOfBirth === "" ||
             stateEmployee.address === "" ||
             stateEmployee.phoneNumber === "" ||
-            stateEmployee.proRota === "" ||
+            stateEmployee.proRata === "" ||
             stateEmployee.salary === ""
         ) {
             alert("Please fill in the sign up form")
@@ -38,7 +38,7 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
             dateOfBirth: "",
             address: "",
             phoneNumber: "",
-            proRota: "",
+            proRata: "",
             salary: ""
         })
     }
@@ -65,7 +65,7 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
                             <label>Date of Birth: </label><input type="date" onChange={handleChange} name="dateOfBirth" placeholder="Enter your date of birth" value={stateEmployee.dateOfBirth} />
                             <label>Address: </label><input type="text" onChange={handleChange} name="address" placeholder="Enter your address" value={stateEmployee.address} />
                             <label>Phone Number: </label><input type="tel" onChange={handleChange} name="phoneNumber" placeholder="Enter your phone number" value={stateEmployee.phoneNumber} />
-                            <label>Pro Rota: </label><input type="text" onChange={handleChange} name="proRota" placeholder="Enter your pro rota" value={stateEmployee.proRota} />
+                            <label>Pro Rata: </label><input type="text" onChange={handleChange} name="proRota" placeholder="Enter your pro rota" value={stateEmployee.proRota} />
                             <label>Salary: </label><input type="text" onChange={handleChange} name="salary" placeholder="Enter your salary" value={stateEmployee.salary} />
                             <input type="submit" value="Create" />
                         </p>
