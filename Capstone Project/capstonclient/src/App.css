@@ -93,7 +93,8 @@
 
 h1 {
   text-align: center;
-  margin: 5px;
+  /* margin: 5px; */
+  margin-top: auto;
 }
 
 .profile-container {
@@ -183,6 +184,47 @@ h1 {
   background-color: #64955F;
 }
 
+.delete-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.delete-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.delete-button:hover {
+  background-color: #64955F;
+}
+
+.return-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+
+}
+
+.return-button:hover {
+  background-color: #64955F;
+}
+
+.return-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 .update-form-container h1 {
   margin-bottom: 50px;
   text-align: center;
@@ -234,4 +276,8 @@ body {
   background-color: #4CAF50;
   color: #fff;
   border-radius: 4px;
+}
+
+p {
+  text-align: center;
 }

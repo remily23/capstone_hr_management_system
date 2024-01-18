@@ -123,12 +123,14 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
           {updateMessage && (<Stack>
             <Alert severity= "success"> {updateMessage} </Alert>
           </Stack>)}
+          <section className="return-button-container">
           <input
              type="submit"
              value="Return"
              className="return-button"
              onClick={handleReturn}
           />
+          </section>
              
           
         </form>

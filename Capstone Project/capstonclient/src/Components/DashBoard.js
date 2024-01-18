@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import * as React from 'react';
 import Table from './Table';
+import { Typography } from "@mui/material";
+
 const DashBoard = ({ currentUser }) => {
   // const location = useLocation()
   // const userName = location.state.lastName
@@ -24,7 +26,7 @@ const DashBoard = ({ currentUser }) => {
   return (
     <>
       
-      <p>{`${greet}, ${currentUser.firstName} ${currentUser.lastName}!`}</p>
+      <Typography component="h1" variant="h5">{`${greet}, ${currentUser.firstName} ${currentUser.lastName}!`}</Typography>
       <Table />
     </>
   );
