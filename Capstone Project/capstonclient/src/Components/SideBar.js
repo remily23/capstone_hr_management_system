@@ -24,6 +24,12 @@ const SideBar = () => {
     setDrawerOpen(open);
   };
 
+  // const toggleDarkMode = () => {
+  //   setDarkMode(!darkMode);
+  //   let icon = document.getElementById("darkModeButton");
+  //   icon.innerText ===
+  // }
+
   const menuItems = [
     { text: "Dashboard", link: "/dashboard", icon: <HomeIcon /> },
     { text: "Profile", link: "/profile", icon: <PersonOutlineIcon /> },
