@@ -39,7 +39,11 @@ With the digitisation of all existing systems due to the recent business expansi
 
 ## 1.2. Business Case
 
-**[Business Case]** link + screenshot TBA
+Our [Business Case](https://github.com/remily23/capstone_hr_management_system/blob/readme/Documentation/Business%20Case.pdf) outlines the MVPs and Extensions we aimed to develop during this project.
+
+Further, it contains a history of RainforestRetail's current paper based system, along with the limitations of attempting to implement a digital HR management application, as well as the approach required. 
+
+The benefits of this project are also stated.
 
 ## 1.3 Risk Register
 
