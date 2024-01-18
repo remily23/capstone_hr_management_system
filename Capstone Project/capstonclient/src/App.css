@@ -1,12 +1,13 @@
 .login {
- background-color: aquamarine;
- align-items: center;
- justify-content: center;
-height: 50%;
-display: flex;
-flex-direction: column;
-flex-wrap: wrap;
+  background-color: aquamarine;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
+
 #login-form {
   justify-content: center;
   display: flex;
@@ -14,14 +15,62 @@ flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-h1{
+.create-account {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 50%;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center; 
+}
+
+.create-account label {
+  font-size: 20px;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.create-account input {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   text-align: center;
-  margin: 5px;
+}
+
+.create-account-form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    position: relative;
+}
+
+.access-level-dropdown {
+  padding: 10px;
+  display: grid;
+  font-size: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  text-align: center;
 }
 
 
-body{
-  background-color: #EEE5E5;
+.create-account-form-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .navigation{
@@ -31,6 +80,20 @@ body{
 
 /* ProfilePage */
 
+
+.create-account-form-button {
+  padding: 10px 20px;
+  margin-top: 25px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+h1 {
+  text-align: center;
+  margin: 5px;
 
 .profile-container {
   max-width: 600px;
@@ -124,3 +187,11 @@ body{
   text-align: center;
 }
 
+body {
+  background-color: #EEE5E5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 65px;
+}
