@@ -6,34 +6,28 @@ const columns = [
   { field: 'id', headerName: 'ID', width: 70 },
   { field: 'firstName', headerName: 'First name', width: 130 },
   { field: 'lastName', headerName: 'Last name', width: 130 },
-  {
-    field: 'Email',
-    headerName: 'Email',
-    type: 'string',
-    width: 90,
+  { field: 'email', headerName: 'Email', // type: 'string', 
+   width: 200,
   },
-  {
-    field: 'fullName',
-    headerName: 'Full name',
-    description: 'This column has a value getter and is not sortable.',
-    sortable: false,
-    width: 160,
-    valueGetter: (params) =>
-      `${params.row.firstName || ''} ${params.row.lastName || ''}`,
-  },
+//   {
+//     field: 'fullName',
+//     headerName: 'Full name',
+//     description: 'This column has a value getter and is not sortable.',
+//     sortable: false,
+//     width: 160,
+//     valueGetter: (params) =>
+//       `${params.row.firstName || ''} ${params.row.lastName || ''}`,
+//   },
 ];
 
 const rows = [
-  { id: 1, lastName: 'Hanks', firstName: 'Jon', email: 35 },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei', email: 42 },
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-  { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-];
+  { id: 1, lastName: 'N', firstName: 'Aanis', email: "aanisn10@gmail.com" },
+  { id: 2, lastName: 'H', firstName: 'Tom', email: "tomhanks@gmail.com" },
+  { id: 3, lastName: 'M', firstName: 'Saima', email: "saima@bnta.com" },
+  { id: 4, lastName: 'R', firstName: 'Emily', email: "emily@bnta.com" },
+  { id: 5, lastName: 'N', firstName: 'Ryan', email: "ryan@bnta.com" },
+  { id: 6, lastName: 'A', firstName: "Gisel", email: "gisel@bnta.com" },
+]
 
 export default function DataTable() {
   return (
