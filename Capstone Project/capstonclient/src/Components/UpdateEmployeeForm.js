@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 import { Alert, Stack } from "@mui/material";
 import AlertTitle from '@mui/material/AlertTitle';
 
@@ -30,6 +29,7 @@ const navigate = useNavigate();
         console.log(employeeDetails);
     }
   return (
+    <>
     <section className="update-form-container">
       <h1>Update your details</h1>
       <form onSubmit={handleFormSubmit} className="form-container">
@@ -128,6 +128,7 @@ const navigate = useNavigate();
                     Information entered is not correct
                 </Alert>
             </Stack>
+            </>
   );
 };
 
