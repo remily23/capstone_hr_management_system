@@ -2,7 +2,7 @@ import { useNavigate, Outlet } from "react-router-dom";
 import { Alert, Stack } from "@mui/material";
 import AlertTitle from "@mui/material/AlertTitle";
 import Avatar from "@mui/material/Avatar";
-import stockimage from "../stockimage.jpeg";
+import aanis from "../aanis.jpg";
 const ProfilePage = ({ currentUser }) => {
   const navigate = useNavigate();
   const toUpdateEmployeeForm = () => {
@@ -12,9 +12,9 @@ const ProfilePage = ({ currentUser }) => {
     <section className="profile-container">
       <Avatar
         className="profile-image"
-        src={stockimage}
+        src={aanis}
         alt="stock img"
-        sx={{ width: 70, height: 70 }}
+        sx={{ width: 100, height: 100 }}
       />
       <h3>My Profile</h3>
       <p>First Name: {currentUser.firstName}</p>
