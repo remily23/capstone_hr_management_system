@@ -1,5 +1,5 @@
 .login {
- background-color: aquamarine;
+ background-color: #B6D7B9;
  align-items: center;
  /* justify-content: center; 
  display: flex; 
@@ -16,7 +16,7 @@ height: 50px;
 
 
 body{
-  background-color: #EEE5E5;
+  background-color: #9FBCA5;
 }
 
 /* ProfilePage */
@@ -30,6 +30,7 @@ body{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   text-align: center; 
+  background-color: #D4DCD0;
 }
 
 .edit-button {
@@ -62,7 +63,7 @@ body{
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: #D4DCD0;;
   text-align: left;
 }
 
@@ -85,6 +86,7 @@ body{
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
+  background-color: #E5EBE1;
 }
 
 .save-button-container {
@@ -111,5 +113,6 @@ body{
 .update-form-container h1 {
   margin-bottom: 50px;
   text-align: center;
+  color: #3A302C;
 }
-
+ 
