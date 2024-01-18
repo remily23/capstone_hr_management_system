@@ -95,6 +95,7 @@ With the digitisation of all existing systems due to the recent business expansi
 ![ER Diagram](main url)
 
 ## 4.4 Persona Diagram
+![Persona Diagram](https://github.com/remily23/capstone_hr_management_system/blob/readme/Diagrams/Persona%20Diagram.png?raw=true)
 
 ## 4.5. Wireframe Diagram
 
