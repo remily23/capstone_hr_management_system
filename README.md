@@ -92,7 +92,7 @@ With the digitisation of all existing systems due to the recent business expansi
 ## 4.2. UML Diagram
 
 ## 4.3. ER Diagram
-![ER Diagram](main url)
+![ER Diagram](https://github.com/remily23/capstone_hr_management_system/blob/readme/Diagrams/ER%20Diagram.png?raw=true)
 
 ## 4.4 Persona Diagram
 ![Persona Diagram](https://github.com/remily23/capstone_hr_management_system/blob/readme/Diagrams/Persona%20Diagram.png?raw=true)
