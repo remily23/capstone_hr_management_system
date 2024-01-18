@@ -13,7 +13,7 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
         dateOfBirth: "",
         address: "",
         phoneNumber: "",
-        proRota: "",
+        proRata: "",
         salary: ""
     });
     const handleFormSubmit = (e) => {
@@ -26,7 +26,7 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
             stateEmployee.dateOfBirth === "" ||
             stateEmployee.address === "" ||
             stateEmployee.phoneNumber === "" ||
-            stateEmployee.proRota === "" ||
+            stateEmployee.proRata === "" ||
             stateEmployee.salary === ""
         ) {
             alert("Please fill in the sign up form")
@@ -42,7 +42,7 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
             dateOfBirth: "",
             address: "",
             phoneNumber: "",
-            proRota: "",
+            proRata: "",
             salary: ""
         })
     }
@@ -57,6 +57,7 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
             <h2>Create Account Page</h2>
             <div>
                 <form onSubmit={handleFormSubmit}>
+
                     <p>Access Level
                         <select id="dropdown">
                             <option>Admin</option>
@@ -73,6 +74,7 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
                         <label>Salary: </label><input type="text" onChange={handleChange} name="salary" placeholder="Enter your salary" value={stateEmployee.salary} />
                         <input type="submit" value="Create" />
                     </p>
+  
                 </form>
             </div>
             <Stack sx={{ width: '100%' }} spacing={2}>

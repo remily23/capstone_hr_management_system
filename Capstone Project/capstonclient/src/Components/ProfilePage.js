@@ -1,6 +1,9 @@
 import { useNavigate, Outlet } from 'react-router-dom';
 import { Alert, Stack } from "@mui/material";
 import AlertTitle from '@mui/material/AlertTitle';
+import Avatar from '@mui/material/Avatar';
+import stockimage from '../stockimage.jpeg'; 
+
 
 const ProfilePage = ({ currentUser }) => {
     const navigate = useNavigate();
@@ -8,27 +11,31 @@ const ProfilePage = ({ currentUser }) => {
     const toUpdateEmployeeForm = () => {
         navigate('/profile/updateDetails', { state: { currentUser } })
     }
-    return (
-        <>
-            <h3>Profile Page</h3>
-            <p>First name: {currentUser.firstName}</p>
-            <p>Last name: {currentUser.lastName}</p>
-            <p>Email: {currentUser.email}</p>
-            <p>Date of birth: {currentUser.dateOfBirth}</p>
-            <p>Address: {currentUser.address}</p>
-            <p>Phone number: {currentUser.phoneNumber}</p>
-            <p>Pro rota: {currentUser.proRota}</p>
-            <p>Salary: {currentUser.salary}</p>
-            <button onClick={toUpdateEmployeeForm}>Edit</button>
-            <Stack sx={{ width: '100%' }} spacing={2}>
+ 
+
+    return ( 
+    <section className="profile-container">
+         <Avatar className="profile-image" src={stockimage} alt="stock img"  sx={{ width: 70, height: 70 }}/>
+        <h3>My Profile</h3>
+        <p>First Name: {currentUser.firstName}</p>
+        <p>Last Name: {currentUser.lastName}</p>
+        <p>Email: {currentUser.email}</p>
+        <p>Date of Birth: {currentUser.dateOfBirth}</p>
+        <p>Address: {currentUser.address}</p>
+        <p>Phone Number: {currentUser.phoneNumber}</p>
+        <p>Pro Rata: {currentUser.proRota}</p>
+        <p>Salary: {currentUser.salary}</p>
+        <button className="edit-button" onClick={toUpdateEmployeeForm}>Edit</button>
+        <Stack sx={{ width: '100%' }} spacing={2}>
                 <Alert severity="success">
                     <AlertTitle>Success</AlertTitle>
                     Account deleted
                 </Alert>
             </Stack>
-        </>
-    );
-
+        </section>
+        
+     );
+     
 }
 
 export default ProfilePage;
