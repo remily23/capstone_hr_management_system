@@ -11,17 +11,14 @@ import Navigation from "../Components/Navigation";
 import DashBoard from "../Components/DashBoard";
 import UpdateEmployeeForm from "../Components/UpdateEmployeeForm";
 import DeleteAccount from "../Components/DeleteAccount";
-
 const DashBoardContainer = () => {
   const [listOfEmployees, setListOfEmployees] = useState([]);
   const [currentUser, setCurrentUser] = useState({});
-
   const fetchEmployee = async () => {
     const response = await fetch("http://localhost:8080/employees");
     const data = await response.json();
     setListOfEmployees(data);
   };
-
   const postEmployee = async (newEmployee) => {
     const response = await fetch("http://localhost:8080/employees", {
       method: "POST",
@@ -31,7 +28,6 @@ const DashBoardContainer = () => {
     const addEmployee = await response.json();
     setListOfEmployees([...listOfEmployees, addEmployee]);
   };
-
   const updateEmployee = async (id, employee) => {
     const response = await fetch(`http://localhost:8080/employees/${id}`, {
       method: "PUT",
@@ -54,7 +50,6 @@ const DashBoardContainer = () => {
     updatedEmployees.splice(indexToRemove);
     setListOfEmployees(updatedEmployees);
   };
-
   useEffect(() => {
     fetchEmployee();
   }, []);
@@ -84,7 +79,6 @@ const DashBoardContainer = () => {
           path: "newAccount",
           element: (
             <CreateAccountForm
-              listOfEmployees={listOfEmployees[0]}
               postEmployee={postEmployee}
             />
           ),

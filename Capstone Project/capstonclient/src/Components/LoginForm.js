@@ -11,19 +11,15 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import Alert from "@mui/material/Alert";
-
 const LoginForm = ({ listOfEmployees, setCurrentUser }) => {
   const navigate = useNavigate();
   const [stateLogin, setStateLogin] = useState({
     email: "",
     password: "",
   });
-
 const location = useLocation();
 // const user =location.state.currentUser;
-
   const [error, setError] = useState(null);
-
   const handleFormSubmit = (event) => {
     event.preventDefault();
     // window.location.reload();
@@ -46,7 +42,6 @@ const location = useLocation();
     copiedEmployee[fieldName] = event.target.value;
     setStateLogin(copiedEmployee);
   };
-
   return (
     <Container component="main" maxWidth="xs"
     sx={{
@@ -104,7 +99,6 @@ const location = useLocation();
             onChange={handleChange}
             value={stateLogin.password}
           />
-
           <Button
             type="submit"
             fullWidth
@@ -118,5 +112,4 @@ const location = useLocation();
     </Container>
   );
 };
-
 export default LoginForm;
