@@ -25,7 +25,7 @@ const DeleteAccount = ({ deleteEmployee, currentUser }) => {
       <p>Pro Rata: {currentUser.proRota}</p>
       <p>Salary: {currentUser.salary}</p>
       <section className="delete-button-container">
-      <input className="delete-button" type="submit" value="delete" onClick={handleDeleteAccount} />
+      <input className="delete-button" type="submit" value="Delete" onClick={handleDeleteAccount} />
       </section>
       {deleteMessage && (
         <Stack>
