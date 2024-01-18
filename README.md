@@ -114,7 +114,6 @@ The developer team evaluated what impact these risks could have on users, the pr
 -	[X] **Admins to create an employee account,** from the HR admin side.
 - [X] **User greeting.** The user will be greeted on the dashboard by their name with a time dependent message; good morning, afternoon or evening. 
 
-
 ## 5.2. Extensions 💪
 - [] **Add additional positions (roles).** Each position will represent each job title employees can belong to. 
 - [] **Remember me button.** This will allow the app to retain the email responsible for each user's log in, allowing for a smoother sign in experience.
@@ -129,5 +128,5 @@ The developer team evaluated what impact these risks could have on users, the pr
 |           GET            | /employees/{employeeId}         | Get employees by id                   |
 |           GET            | /employees       | Get all employees                 |             
 |           GET            | /positions/         | Display all employee positions, titles and access levels                   |   
-|           PATCH            | /employees/{employeeId}          | Update a specific employee by id              |
-|           DELETE            | /employees/{employeeId}         | Delete an employee by id                    |
+|           PATCH            | /employees/{employeeid}          | Update a specific employee by id              |
+|           DELETE            | /employees/{employeeid}         | Delete an employee by id                    |
