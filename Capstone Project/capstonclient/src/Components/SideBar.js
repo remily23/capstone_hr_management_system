@@ -11,11 +11,11 @@ import HomeIcon from "@mui/icons-material/Home";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import LogoutIcon from "@mui/icons-material/Logout";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
-import PersonRemoveIcon from '@mui/icons-material/PersonRemove';
-import VpnKeyIcon from '@mui/icons-material/VpnKey';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
-import LiveHelpIcon from '@mui/icons-material/LiveHelp';
+import PersonRemoveIcon from "@mui/icons-material/PersonRemove";
+import VpnKeyIcon from "@mui/icons-material/VpnKey";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LiveHelpIcon from "@mui/icons-material/LiveHelp";
 
 const SideBar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -27,8 +27,12 @@ const SideBar = () => {
   const menuItems = [
     { text: "Dashboard", link: "/dashboard", icon: <HomeIcon /> },
     { text: "Profile", link: "/profile", icon: <PersonOutlineIcon /> },
-    { text: "Create Account", link: "/newaccount", icon: <PersonAddIcon /> },
-    { text: "Delete Account", link: "/profile", icon: <PersonRemoveIcon /> },
+    { text: "Create Account", link: "/newAccount", icon: <PersonAddIcon /> },
+    {
+      text: "Delete Account",
+      link: "/deleteAccount",
+      icon: <PersonRemoveIcon />,
+    },
     { text: "Password", link: "/profile", icon: <VpnKeyIcon /> },
     { text: "Light mode", link: "/dashboard", icon: <LightModeIcon /> },
     { text: "Dark mode", link: "/dashboard", icon: <DarkModeIcon /> },

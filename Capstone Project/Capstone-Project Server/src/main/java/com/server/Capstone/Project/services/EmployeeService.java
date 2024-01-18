@@ -79,4 +79,8 @@ public class EmployeeService {
         return employee;
     }
 
+    public Long deleteEmployee(Long id) {
+        employeeRepository.deleteById(id);
+        return id;
+    }
 }

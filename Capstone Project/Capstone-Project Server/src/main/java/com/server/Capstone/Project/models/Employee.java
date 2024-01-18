@@ -12,7 +12,7 @@ import java.time.LocalDate;
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long employeeId;
+    private Long id;
 
     @OrderColumn
     @Name(value= "first_name")
@@ -64,12 +64,12 @@ public class Employee {
     public Employee() {
     }
 
-    public Long getEmployeeId() {
-        return employeeId;
+    public Long getid() {
+        return id;
     }
 
-    public void setEmployeeId(Long employeeId) {
-        this.employeeId = employeeId;
+    public void setid(Long id) {
+        this.id = id;
     }
 
     public String getFirstName() {
