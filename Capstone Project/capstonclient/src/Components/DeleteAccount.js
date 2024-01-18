@@ -1,8 +1,9 @@
 import { EmojiEmotions } from "@mui/icons-material";
-import { Button } from "@mui/material";
+import { Button, Alert, Stack, AlertTitle } from "@mui/material";
 import { useState } from "react";
 
 const DeleteAccount = ({ deleteEmployee, currentUser }) => {
+  const [deleteMessage, setDeleteMessage] = useState(null);
   //   const [employeeDetails, setEmployeeDetails] = useState(currentUser);
 
   //   console.log(employeeDetails);
@@ -11,7 +12,8 @@ const DeleteAccount = ({ deleteEmployee, currentUser }) => {
     // console.log("hello");
     e.preventDefault();
     deleteEmployee(currentUser.id);
-    // setEmployeeDetails({
+    setDeleteMessage("Account has been successfully deleted");
+    // setEmployeeDetails({s
     //     currentUser.firstName = ""
 
     // })
@@ -28,7 +30,12 @@ const DeleteAccount = ({ deleteEmployee, currentUser }) => {
       <p>Phone Number: {currentUser.phoneNumber}</p>
       <p>Pro Rata: {currentUser.proRota}</p>
       <p>Salary: {currentUser.salary}</p>
-      <input type="submit" value="delete" onSubmit={handleDeleteAccount} />
+      <input type="submit" value="delete" onClick={handleDeleteAccount} />
+      {deleteMessage && (
+        <Stack>
+          <Alert severity="success">{deleteMessage}</Alert>
+        </Stack>
+      )}
     </>
   );
 };

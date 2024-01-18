@@ -31,13 +31,6 @@ const ProfilePage = ({ currentUser }) => {
       <button className="edit-button" onClick={toUpdateEmployeeForm}>
         Edit
       </button>
-
-      <Stack sx={{ width: "100%" }} spacing={2}>
-        <Alert severity="success">
-          <AlertTitle>Success</AlertTitle>
-          Account deleted
-        </Alert>
-      </Stack>
     </section>
   );
 };
