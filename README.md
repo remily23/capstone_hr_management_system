@@ -8,26 +8,29 @@
 - GitHub: [Ryan](https://github.com/RyanNekadio)
 
 ## Table of Contents 📜 - ***section links TBA
-1. Introduction 
-   - 1.1. Business Scenario
-   - 1.2 Business Case
-   - 1.3 Risk Register
-2. Technologies & Libraries
-   - 2.1. Server-side
-   - 2.2. Client-side
-3. Setup Instructions
-   - 3.1. Server-side
-   - 3.2 Client-side
-4. Diagrams
-    - 4.1 Component/Container
-    - 4.2. UML
-    - 4.3. ER
-    - 4.4. Persona
-    - 4.5 Wireframe
-5. System Functionality
-    - 5.1. MVPs
-    - 5.2. Extensions
-6. API Routes
+- [Capstone Project - Group 4: HireHues HR Management System](#capstone-project---group-4-hirehues-hr-management-system)
+  - [👥🎸 Developer Team 👥🎸](#-developer-team-)
+  - [Table of Contents 📜 - \*\*\*section links TBA](#table-of-contents----section-links-tba)
+  - [1. Introduction](#1-introduction)
+  - [1.1. Business Scenario](#11-business-scenario)
+  - [1.1. Business Case](#11-business-case)
+  - [1.2 Risk Register](#12-risk-register)
+  - [2. Technologies \& Libraries](#2-technologies--libraries)
+  - [2.1. Server-side](#21-server-side)
+  - [2.2. Client-side](#22-client-side)
+  - [3. Setup Instructions 🛠️](#3-setup-instructions-️)
+  - [3.1 Server Side Setup](#31-server-side-setup)
+  - [3.2 Client Side Setup](#32-client-side-setup)
+  - [4. Diagrams 🎨](#4-diagrams-)
+  - [4.1. Component/Container Diagram](#41-componentcontainer-diagram)
+  - [4.2. UML Diagram](#42-uml-diagram)
+  - [4.3. ER Diagram](#43-er-diagram)
+  - [4.4 Persona Diagram](#44-persona-diagram)
+  - [4.5. Wireframe Diagram](#45-wireframe-diagram)
+  - [5. System Functionality](#5-system-functionality)
+  - [5.1. MVPs 🫡](#51-mvps-)
+  - [5.2. Extensions 💪](#52-extensions-)
+  - [6. API Routes](#6-api-routes)
 
 ## 1. Introduction
 The best HR management tool fostering Agile talent Ecosystems! 
@@ -47,7 +50,7 @@ With the digitisation of all existing systems due to the recent business expansi
 
 ## 2. Technologies & Libraries
 
-## 2.1. Server-side ***to finalise
+## 2.1. Server-side
 - Java 17
 - IntelliJ IDEA IDE CE
 - Spring Boot
@@ -58,7 +61,7 @@ With the digitisation of all existing systems due to the recent business expansi
 - Postico
 - GitHub
   
-## 2.2. Client-side ***to finalise
+## 2.2. Client-side
 - RainforestRetail HR Management System API ***(link to API folder TBA)
 - Visual Studio Code
 - JavaScript
@@ -76,7 +79,7 @@ With the digitisation of all existing systems due to the recent business expansi
 2. Open the project in IntelliJ
 3. Create a database called "hr_db"
 
-## 3.2 Client Side Setup ***to add copy function with ```
+## 3.2 Client Side Setup
 1. Open the project in Visual Studio Code
 2. Enter `npi i` in the terminal to install the node modules
 3. Enter `npm install react-router-dom` in the terminal to install the React Router
@@ -99,6 +102,7 @@ With the digitisation of all existing systems due to the recent business expansi
 ## 4.5. Wireframe Diagram
 
 ## 5. System Functionality
+
 ## 5.1. MVPs 🫡
 
 -	[X] **Create an admin Login page.** This will be the first page introduced to the user. The main functionality of this page will be to allow the user to sign into the app.
@@ -107,7 +111,7 @@ With the digitisation of all existing systems due to the recent business expansi
 - [X] **User greeting.** The user will be greeted on the dashboard by their name with a time dependent message; good morning, afternoon or evening. 
 
 
-## 5.2. Extensions 💪 ***to be finalised
+## 5.2. Extensions 💪
 - [] **Add additional positions (roles).** Each position will represent each job title employees can belong to. 
 - [] **Remember me button.** This will allow the app to retain the email responsible for each user's log in, allowing for a smoother sign in experience.
 - Forgot me button
