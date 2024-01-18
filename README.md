@@ -81,7 +81,8 @@ With the digitisation of all existing systems due to the recent business expansi
 2. Enter `npi i` in the terminal to install the node modules
 3. Enter `npm install react-router-dom` in the terminal to install the React Router
 4. Enter `npm install @mui/material @emotion/react @emotion/styled` to install the dependencies associated with the Material UI library
-5. Start running the app with `npm start` in the terminal
+5. Enter `npm install @mui/x-data-grid` for Material UI dependencies associated with the dashboard table
+6. Start running the app with `npm start` in the terminal
 
 
 ## 4. Diagrams 🎨
