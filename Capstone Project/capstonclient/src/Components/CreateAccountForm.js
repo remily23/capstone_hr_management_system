@@ -53,11 +53,12 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
         <section className="create-account">
             <h2>Create Account</h2>
                 <form onSubmit={handleFormSubmit}>
-                        <section>Access Level
+                        <section className="access-level-dropdown">Access Level:
                             <select id="dropdown">
                                 <option>Admin</option>
                                 <option>Employee</option>
                             </select></section>
+                            <section className="create-account-form-container">
 
                             <section><label>First Name: </label><input type="text" onChange={handleChange} name="firstName" placeholder="Enter your first name" value={stateEmployee.firstName} /></section>
 
@@ -73,12 +74,13 @@ const CreateAccountForm = ({ currentUser, postEmployee }) => {
                             
                             <section><label>Phone Number: </label><input type="tel" onChange={handleChange} name="phoneNumber" placeholder="Enter your phone number" value={stateEmployee.phoneNumber} /></section>
 
-                            <section><label>Pro Rota: </label><input type="text" onChange={handleChange} name="proRota" placeholder="Enter your pro rota" value={stateEmployee.proRota} /></section>
+                            <section><label>Pro Rata: </label><input type="text" onChange={handleChange} name="proRata" placeholder="Enter your pro rata" value={stateEmployee.proRata} /></section>
 
                             <section><label>Salary: </label><input type="text" onChange={handleChange} name="salary" placeholder="Enter your salary" value={stateEmployee.salary} /></section>
                             
-                            <section><input type="submit" value="Create" /></section>
+                </section>            
                 </form>
+                <section className="create-account-form-button"><input type="submit" value="Create Account" /></section>
                 </section>
         </>
     );

@@ -1,11 +1,11 @@
 .login {
- background-color: aquamarine;
- align-items: center;
- justify-content: center;
- height: 50%;
- display: flex;
- flex-direction: column;
- flex-wrap: wrap;
+  background-color: aquamarine;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 #login-form {
@@ -16,10 +16,13 @@
 }
 
 .create-account {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 80%;
+  height: 50%;
   max-width: 600px;
   margin: auto;
   padding: 20px;
@@ -31,45 +34,60 @@
 }
 
 .create-account label {
-  flex-direction: column;
-  margin-bottom: 10px;
-  width: 48%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  flex-direction: row;
-  align-items: flex-start;
+  font-size: 20px;
   margin-bottom: 5px;
-  margin-right: 50px;
-  margin: 1em;
+  padding: 10px;
 }
 
 .create-account input {
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-left: 10px;
-  display: grid;
   width: 100%;
-  padding: 8px;
+  padding: 5px;
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
+  text-align: center;
 }
 
-/* .create-account p {
-  justify-content: center;
-  display: grid;
-  align-items: center;
-  flex-direction: column;
-} */
+.create-account-form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    position: relative;
+}
 
-h1{
+.access-level-dropdown {
+  padding: 10px;
+  display: grid;
+  font-size: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.create-account-form-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.create-account-form-button {
+  padding: 10px 20px;
+  margin-top: 25px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+h1 {
   text-align: center;
   margin: 5px;
 }
 
-body{
+body {
   background-color: #EEE5E5;
   display: flex;
   justify-content: center;
