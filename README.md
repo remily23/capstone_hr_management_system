@@ -9,25 +9,25 @@
 
 ## Table of Contents 📜
   - [1. Introduction](#1-introduction)
-  - [1.1. Business Scenario](#11-business-scenario)
-  - [1.1. Business Case](#11-business-case)
-  - [1.2 Risk Register](#12-risk-register)
-  - [2. Technologies \& Libraries](#2-technologies--libraries)
+    - [1.1. Business Scenario](#11-business-scenario)
+    - [1.2. Business Case](#12-business-case)
+    - [1.3 Risk Register](#13-risk-register)
+- [2. Technologies \& Libraries](#2-technologies--libraries)
   - [2.1. Server-side](#21-server-side)
   - [2.2. Client-side](#22-client-side)
-  - [3. Setup Instructions 🛠️](#3-setup-instructions-️)
+- [3. Setup Instructions 🛠️](#3-setup-instructions-️)
   - [3.1 Server Side Setup](#31-server-side-setup)
   - [3.2 Client Side Setup](#32-client-side-setup)
-  - [4. Diagrams 🎨](#4-diagrams-)
+- [4. Diagrams 🎨](#4-diagrams-)
   - [4.1. Component/Container Diagram](#41-componentcontainer-diagram)
   - [4.2. UML Diagram](#42-uml-diagram)
   - [4.3. ER Diagram](#43-er-diagram)
   - [4.4 Persona Diagram](#44-persona-diagram)
   - [4.5. Wireframe Diagram](#45-wireframe-diagram)
-  - [5. System Functionality](#5-system-functionality)
+- [5. System Functionality](#5-system-functionality)
   - [5.1. MVPs 🫡](#51-mvps-)
   - [5.2. Extensions 💪](#52-extensions-)
-  - [6. API Routes](#6-api-routes)
+- [6. API Routes](#6-api-routes)
 
 ## 1. Introduction
 The best HR management tool fostering Agile talent Ecosystems! 
@@ -37,11 +37,11 @@ RainforestRetail currently manage employee information with a hard-copy paper re
 
 With the digitisation of all existing systems due to the recent business expansion, the development of an online HR records system will allow HR Admins to easily update records, improve security measures upgrading from a paper system, as well as aid RainforestRetail to comply with GDPR and other data protection regulations.
 
-## 1.1. Business Case
+## 1.2. Business Case
 
 **[Business Case]** link + screenshot TBA
 
-## 1.2 Risk Register
+## 1.3 Risk Register
 
 **[Risk Register]** link + screenshot TBA
 
