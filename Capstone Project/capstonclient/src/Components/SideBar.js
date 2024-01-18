@@ -48,7 +48,8 @@ const SideBar = () => {
           onClick={toggleDrawer(true)}
           startIcon={<MenuIcon />}
           variant="contained"
-          color="primary"
+          style={{ backgroundColor: "#4CAF50", color: "#ffffff" }}
+
         >
           Menu
         </Button>
@@ -57,7 +58,7 @@ const SideBar = () => {
             {menuItems.map((item, index) => (
               <ListItem key={index} button onClick={toggleDrawer(false)}>
                 <ListItemButton>
-                  <Avatar sx={{ bgcolor: "secondary.main", mr: 2 }}>
+                  <Avatar sx={{ bgcolor: "#4CAF50", mr: 2 }}>
                     {item.icon}
                   </Avatar>
                   <Link

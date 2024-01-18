@@ -27,7 +27,7 @@ const DashBoard = ({ currentUser }) => {
   }, []);
   return (
     <>
-      <h2>Home Page</h2>
+      
       <p>{`${greet}, ${currentUser.firstName} ${currentUser.lastName}!`}</p>
       <Table />
 

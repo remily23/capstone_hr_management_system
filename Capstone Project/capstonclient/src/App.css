@@ -1,5 +1,4 @@
 .login {
-  background-color: aquamarine;
   align-items: center;
   justify-content: center;
   height: 50%;
@@ -13,6 +12,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  background-color: "#F5F5F5";
 }
 
 .create-account {
@@ -29,7 +29,7 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: #F5F5F5;
   text-align: center; 
 }
 
@@ -103,14 +103,14 @@ h1 {
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: #F5F5F5;
   text-align: center; 
 }
 
 .edit-button {
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #1976d2;
+  background-color: #4CAF50;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -119,7 +119,7 @@ h1 {
 }
 
 .edit-button:hover {
-  background-color: #1565c0;
+  background-color: #64955F;
 }
 
 .profile-image {
@@ -171,7 +171,7 @@ h1 {
 
 .save-button {
   padding: 10px 20px;
-  background-color: #1976d2;
+  background-color: #4CAF50;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -180,7 +180,7 @@ h1 {
 }
 
 .save-button:hover {
-  background-color: #1565c0;
+  background-color: #64955F;
 }
 
 .update-form-container h1 {
@@ -189,10 +189,49 @@ h1 {
 }
 
 body {
-  background-color: #EEE5E5;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 65px;
+}
+
+.delete-account-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #F5F5F5;
+  text-align: center; 
+}
+
+.delete-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.delete-button:hover {
+  background-color: #64955F;
+}
+
+.delete-account-details {
+  text-align: left;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.delete-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border-radius: 4px;
 }
