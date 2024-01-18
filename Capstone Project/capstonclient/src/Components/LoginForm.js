@@ -43,7 +43,11 @@ const location = useLocation();
     setStateLogin(copiedEmployee);
   };
   return (
-    <Container component="main" maxWidth="xs">
+    <Container component="main" maxWidth="xs"
+    sx={{
+      backgroundColor: '#F5F5F5',
+    }}
+    >
       <CssBaseline />
       <Box
         sx={{
@@ -51,9 +55,10 @@ const location = useLocation();
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          
         }}
       >
-        <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+        <Avatar sx={{ m: 1, bgcolor: "brown", }}>
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
@@ -80,7 +85,7 @@ const location = useLocation();
             autoComplete="email"
             autoFocus
             onChange={handleChange}
-            value={stateLogin.email}
+            value={stateLogin.email}  
           />
           <TextField
             margin="normal"
@@ -98,7 +103,7 @@ const location = useLocation();
             type="submit"
             fullWidth
             variant="contained"
-            sx={{ mt: 3, mb: 2 }}
+            sx={{ mt: 3, mb: 2, bgcolor: "#4CAF50" }}
           >
             Log In
           </Button>
