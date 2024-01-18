@@ -1,3 +1,15 @@
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 65px;
+  background-image: url("../src/image\ \(1\).png");
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
 .login {
   align-items: center;
   justify-content: center;
@@ -231,14 +243,7 @@ h1 {
 }
 
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 65px;
-  background-color: pink !important;
-}
+
 
 .delete-account-container {
   max-width: 600px;
