@@ -48,7 +48,11 @@ const DashBoardContainer = () => {
       headers: { "Content-Type": "application/json" },
     });
     const deleteDetails = await response.json();
-    setListOfEmployees([...listOfEmployees, deleteDetails]);
+    const updatedEmployees = [...listOfEmployees];
+    const employeeToRemove = updatedEmployees.find(employee => employee.id===deleteDetails);
+    const indexToRemove = updatedEmployees.indexOf(employeeToRemove);
+    updatedEmployees.splice(indexToRemove);
+    setListOfEmployees(updatedEmployees);
   };
 
   useEffect(() => {

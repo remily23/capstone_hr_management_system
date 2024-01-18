@@ -1,8 +1,10 @@
 import { EmojiEmotions } from "@mui/icons-material";
 import { Button, Alert, Stack, AlertTitle } from "@mui/material";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const DeleteAccount = ({ deleteEmployee, currentUser }) => {
+  const navigate = useNavigate();
   const [deleteMessage, setDeleteMessage] = useState(null);
   //   const [employeeDetails, setEmployeeDetails] = useState(currentUser);
 
@@ -12,7 +14,8 @@ const DeleteAccount = ({ deleteEmployee, currentUser }) => {
     // console.log("hello");
     e.preventDefault();
     deleteEmployee(currentUser.id);
-    setDeleteMessage("Account has been successfully deleted");
+    navigate("../login");
+    // setDeleteMessage("Account has been successfully deleted");
     // setEmployeeDetails({s
     //     currentUser.firstName = ""
 
