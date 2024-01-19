@@ -18,12 +18,14 @@ const columns = [
 //   },
 ];
 const rows = [
-  { id: 1, lastName: 'N', firstName: 'Aanis', email: "aanisn10@gmail.com" },
+  { id: 1, lastName: 'A', firstName: "Gisel", email: "gisel@bnta.com" },
   { id: 2, lastName: 'H', firstName: 'Tom', email: "tomhanks@gmail.com" },
   { id: 3, lastName: 'M', firstName: 'Saima', email: "saima@bnta.com" },
   { id: 4, lastName: 'R', firstName: 'Emily', email: "emily@bnta.com" },
   { id: 5, lastName: 'N', firstName: 'Ryan', email: "ryan@bnta.com" },
-  { id: 6, lastName: 'A', firstName: "Gisel", email: "gisel@bnta.com" },
+  { id: 6, lastName: 'N', firstName: 'Aanis', email: "aanisn10@gmail.com"
+},
+
 ]
 export default function DataTable() {
   return (
