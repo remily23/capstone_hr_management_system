@@ -65,7 +65,7 @@ The developer team evaluated what impact these risks could have on users, the pr
 - GitHub
   
 ## 2.2. Client-side
-- RainforestRetail HR Management System API ***(link to API folder TBA)
+- RainforestRetail HR Management System API
 - Visual Studio Code
 - JavaScript
 - HTML
