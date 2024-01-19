@@ -87,13 +87,13 @@ public class DataLoader implements ApplicationRunner {
         Employee aanis = new Employee(
                 "Aanis",
                 "N",
-                "aanisn10@gmail.com",
-                "aanis10",
-                "2000-09-29",
+                "aanis@bnta.com",
+                "123",
+                "1972-09-29",
                 "SW3 5GH",
-                "012345678910",
+                "07908909090",
                 7989,
-                2000
+                100000
         );
 
 
