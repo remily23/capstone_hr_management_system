@@ -20,16 +20,17 @@ public class DataLoader implements ApplicationRunner {
     }
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        Employee aanis = new Employee(
-                "Aanis",
-                "N",
-                "aanisn10@gmail.com",
-                "aanis10",
-                "2000-09-29",
-                "SW3 5GH",
-                "012345678910",
-                7989,
-                2000
+        
+        Employee gisele = new Employee(
+                "Gisele",
+                "A",
+                "gisel@bnta.com",
+                "123",
+                "2000-04-04",
+                "BN6 7TA",
+                "456654321",
+                16,
+                46
         );
 
 
@@ -81,17 +82,20 @@ public class DataLoader implements ApplicationRunner {
                 15,
                 35
         );
-        Employee gisele = new Employee(
-                "Gisele",
-                "A",
-                "gisel@bnta.com",
-                "123",
-                "2000-04-04",
-                "BN6 7TA",
-                "456654321",
-                16,
-                46
+
+
+        Employee aanis = new Employee(
+                "Aanis",
+                "N",
+                "aanisn10@gmail.com",
+                "aanis10",
+                "2000-09-29",
+                "SW3 5GH",
+                "012345678910",
+                7989,
+                2000
         );
+
 
         Position position = new Position(
                 "HR department",
