@@ -127,9 +127,8 @@ The developer team evaluated what impact these risks could have on users, the pr
 ## 6. API Routes
 |       Request  | Path |Description                          |
 |:------------------------------:|:-------------|:-------------------------------------|
-|           POST            | /newemployee          | Add a new employee                    |
-|           GET            | /employees/{employeeId}         | Get employees by id                   |
-|           GET            | /employees       | Get all employees                 |             
-|           GET            | /positions/         | Display all employee positions, titles and access levels                   |   
-|           PATCH            | /employees/{employeeid}          | Update a specific employee by id              |
-|           DELETE            | /employees/{employeeid}         | Delete an employee by id                    |
+|           GET            | /dashboard         | Gets the user dashboard for the logged in user                   |
+|           GET            | /profile         | Gets the user profile for the logged in user                   |
+|           PUT            | /profile/updateDetails         | Updates the user profile for the user logged in         |
+|           POST            | /newaccount          | Adds a new employee                    |
+|           DELETE            | /deleteaccount         | Deletes an employee account         |
