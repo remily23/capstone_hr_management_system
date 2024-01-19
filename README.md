@@ -94,8 +94,10 @@ The developer team evaluated what impact these risks could have on users, the pr
 ## 4. Diagrams 🎨
 
 ## 4.1. Component/Container Diagram
+![Component/Container Diagram](https://github.com/remily23/capstone_hr_management_system/blob/readme/Diagrams/Component:Container%20Diagram.png?raw=true)
 
 ## 4.2. UML Diagram
+![UM Diagram](https://github.com/remily23/capstone_hr_management_system/blob/readme/Diagrams/UML%20Diagram.png?raw=true)
 
 ## 4.3. ER Diagram
 ![ER Diagram](https://github.com/remily23/capstone_hr_management_system/blob/readme/Diagrams/ER%20Diagram.png?raw=true)
@@ -104,6 +106,7 @@ The developer team evaluated what impact these risks could have on users, the pr
 ![Persona Diagram](https://github.com/remily23/capstone_hr_management_system/blob/readme/Diagrams/Persona%20Diagram.png?raw=true)
 
 ## 4.5. Wireframe Diagram
+![Wireframe Diagram](https://github.com/remily23/capstone_hr_management_system/blob/readme/Diagrams/Wireframe%20Diagram.png?raw=true)
 
 ## 5. System Functionality
 
