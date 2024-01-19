@@ -115,14 +115,12 @@ The developer team evaluated what impact these risks could have on users, the pr
 -	[X] **Create an admin Login page.** This will be the first page introduced to the user. The main functionality of this page will be to allow the user to sign into the app.
 -	[X] **Admin Dashboard.** This is the main page of the app. This page will include navigation prompts to direct the user to the rest of the app.
 -	[X] **Admins to create an employee account,** from the HR admin side.
-- [X] **User greeting.** The user will be greeted on the dashboard by their name with a time dependent message; good morning, afternoon or evening. 
 
 ## 5.2. Extensions 💪
-- [] **Add additional positions (roles).** Each position will represent each job title employees can belong to. 
-- [] **Remember me button.** This will allow the app to retain the email responsible for each user's log in, allowing for a smoother sign in experience.
-- Forgot me button
-- FAQs
-- Back the top feature
+- [X] **Admins can delete user accounts.** To keep records system secure and up to date.
+- [X] **User greeting.** The user will be greeted on the dashboard by their name with a time dependent message; good morning, afternoon or evening.
+- [X] **Implement Material UI** for improved UX.
+- [X] **Add dynamic table on the dashboard to display all users.** Users will be able to view and filter results.
 
 ## 6. API Routes
 |       Request  | Path |Description                          |
