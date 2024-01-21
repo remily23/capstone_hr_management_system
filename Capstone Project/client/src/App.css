@@ -1,0 +1,348 @@
+/* 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 65px;
+  background-image: url("../src/image\ \(1\).png");
+  background-size:cover;
+  background-repeat: no-repeat;
+} */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 65px;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../src/image (1).png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.7; /* Adjust the opacity value (0 to 1) for transparency */
+  z-index: -1; /* Send the pseudo-element to the background */
+}
+
+/* .data-table {
+  background-color: #fff; 
+
+} */
+
+
+
+/* Add other styles for your content here */
+
+
+.login {
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#login-form {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: "#F5F5F5";
+}
+
+.create-account {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 50%;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #F5F5F5;
+  text-align: center; 
+}
+
+.create-account label {
+  font-size: 20px;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.create-account input {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.create-account-form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    position: relative;
+}
+
+.access-level-dropdown {
+  padding: 10px;
+  display: grid;
+  font-size: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+
+.create-account-form-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.navigation{
+  margin-right: 5px;
+}
+
+
+/* ProfilePage */
+
+
+.create-account-form-button {
+  padding: 10px 20px;
+  margin-top: 25px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+h1 {
+  text-align: center;
+  /* margin: 5px; */
+  margin-top: auto;
+}
+
+.profile-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 100px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #F5F5F5;
+  text-align: center; 
+}
+
+.edit-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.edit-button:hover {
+  background-color: #64955F;
+}
+
+.profile-image {
+  margin: auto; 
+  display: block; 
+}
+
+
+/* UpdateEmployeeForm */
+
+.update-form-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: left;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  position: relative;
+}
+
+.form-container label {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+
+.form-container input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.save-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+
+.save-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.save-button:hover {
+  background-color: #64955F;
+}
+
+.delete-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.delete-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.delete-button:hover {
+  background-color: #64955F;
+}
+
+.return-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+
+}
+
+.return-button:hover {
+  background-color: #64955F;
+}
+
+.return-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.update-form-container h1 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+
+
+
+.delete-account-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 100px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #F5F5F5;
+  text-align: center; 
+}
+
+.delete-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.delete-button:hover {
+  background-color: #64955F;
+}
+
+.delete-account-details {
+  text-align: left;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.delete-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.create-account-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.create-account-form-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #F5F5F5;
+  text-align: center; 
+}
+
+.create-account-button:hover {
+  background-color: #64955F;
+}
+
+p {
+  text-align: center;
+}
