@@ -78,7 +78,7 @@ The developer team evaluated what impact these risks could have on users, the pr
 ## 3. Setup Instructions 🛠️
 
 ## 3.1 Server Side Setup
-1. Clone the API from the repo (link to API folder TBA)
+1. Clone the API from the repo
 2. Open the project in IntelliJ
 3. Create a database called "hr_db"
 
