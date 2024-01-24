@@ -84,12 +84,8 @@ The developer team evaluated what impact these risks could have on users, the pr
 
 ## 3.2 Client Side Setup
 1. Open the project in Visual Studio Code
-2. Enter `npi i` in the terminal to install the node modules
-3. Enter `npm install react-router-dom` in the terminal to install the React Router
-4. Enter `npm install @mui/material @emotion/react @emotion/styled` to install the dependencies associated with the Material UI library
-5. Enter `npm install @mui/x-data-grid` for Material UI dependencies associated with the dashboard table
-6. Start running the app with `npm start` in the terminal
-
+2. Enter `npi i` in the terminal to install the node modules and dependencies associated with Material UI
+3. Start running the app with `npm start` in the terminal
 
 ## 4. Diagrams 🎨
 
