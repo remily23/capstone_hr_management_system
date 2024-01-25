@@ -30,7 +30,7 @@ public class Employee {
     @Column
     private String phoneNumber;
     @Column
-    private int proRata;
+    private double proRata;
     @Column
     private int salary;
 
@@ -47,7 +47,7 @@ public class Employee {
                     String dateOfBirth,
                     String address,
                     String phoneNumber,
-                    int proRata,
+                    double proRata,
                     int salary
                     ) {
         this.firstName = firstName;
@@ -100,7 +100,7 @@ public class Employee {
         return phoneNumber;
     }
 
-    public int getProRata() {
+    public double getProRata() {
         return proRata;
     }
 
@@ -140,7 +140,7 @@ public class Employee {
         this.phoneNumber = phoneNumber;
     }
 
-    public void setProRata(int proRata) {
+    public void setProRata(double proRata) {
         this.proRata = proRata;
     }
 

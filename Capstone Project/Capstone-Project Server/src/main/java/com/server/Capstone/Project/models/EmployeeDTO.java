@@ -8,7 +8,7 @@ public class EmployeeDTO {
     private String dateOfBirth;
     private String address;
     private String phoneNumber;
-    private int proRata;
+    private double proRata;
     private int salary;
 
     public EmployeeDTO() {
@@ -70,7 +70,7 @@ public class EmployeeDTO {
         this.phoneNumber = phoneNumber;
     }
 
-    public int getProRata() {
+    public double getProRata() {
         return proRata;
     }
 
