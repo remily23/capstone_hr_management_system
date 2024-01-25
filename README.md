@@ -118,7 +118,7 @@ The developer team evaluated what impact these risks could have on users, the pr
 - [X] **Implement Material UI** for improved UX.
 - [X] **Add dynamic table on the dashboard to display all users.** Users will be able to view and filter results.
 
-## 6. API Routes
+## 6. API Routes ** to amend
 |       Request  | Path |Description                          |
 |:------------------------------:|:-------------|:-------------------------------------|
 |           GET            | /dashboard         | Gets the user dashboard for the logged in user                   |
