@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Stack, Alert } from "@mui/material";
 const UpdateEmployeeForm = ({ updateEmployee }) => {
+
   const navigate = useNavigate();
   const location = useLocation();
   const employee = location.state.currentUser;
   const [employeeDetails, setEmployeeDetails] = useState(employee);
   const [updateMessage, setUpdateMessage] = useState(null);
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
     updateEmployee(employee.id, employeeDetails);
     setUpdateMessage("User has been updated successfully");
-    // navigate("../profile");
 
   };
   const handleReturn= (event) => {
@@ -140,4 +141,5 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
     </>
   );
 };
+
 export default UpdateEmployeeForm;

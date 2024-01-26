@@ -1,12 +1,7 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import * as React from 'react';
 import Table from './Table';
 import { Typography } from "@mui/material";
-
 const DashBoard = ({ currentUser }) => {
-  // const location = useLocation()
-  // const userName = location.state.lastName
   const [greet, setGreet] = useState("");
   const getCurrentTime = () => new Date().getHours();
   const greetingTime = (hour) => {
@@ -25,7 +20,6 @@ const DashBoard = ({ currentUser }) => {
   }, []);
   return (
     <>
-      
       <Typography component="h1" variant="h5">{`${greet}, ${currentUser.firstName} ${currentUser.lastName}!`}</Typography>
       <Table />
     </>

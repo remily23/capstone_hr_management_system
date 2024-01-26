@@ -33,21 +33,6 @@ public class DataLoader implements ApplicationRunner {
                 46
         );
 
-
-        Employee tom = new Employee(
-                "Tom",
-                "Hanks",
-                "tomhanks@gmail.com",
-                "tomhanks",
-                "1956-07-09",
-                "BN2 3TA",
-                "109384374839",
-                12,
-                22
-        );
-
-
-
         Employee saima = new Employee(
                 "Saima",
                 "M",
@@ -97,23 +82,43 @@ public class DataLoader implements ApplicationRunner {
         );
 
 
-        Position position = new Position(
+        Position hrManager = new Position(
                 "HR department",
                 "Manager",
                 "admin");
 
+        Position hrAdmin = new Position(
+                "HR department",
+                "Admin",
+                "admin");
+
+        Position financeEmployee = new Position(
+                "Finance",
+                "Analyst",
+                "employee");
+
+        Position financeManager = new Position(
+                "Finance",
+                "Manager",
+                "admin");
+
+        positionRepository.save(hrAdmin);
+        positionRepository.save(hrManager);
+        positionRepository.save(financeManager);
+        positionRepository.save(financeEmployee);
+
+        aanis.setPosition(hrAdmin);
+        gisele.setPosition(hrManager);
+        ryan.setPosition(financeEmployee);
+        saima.setPosition(financeEmployee);
+        emily.setPosition(financeEmployee);
+
         employeeRepository.save(aanis);
-        employeeRepository.save(tom);
         employeeRepository.save(saima);
         employeeRepository.save(emily);
         employeeRepository.save(ryan);
         employeeRepository.save(gisele);
 
-//        employee1.setPosition(position);
-//        employee2.setPosition(position);
-//        position.addEmployee(employee1);
-//        position.addEmployee(employee2);
-        positionRepository.save(position);
     }
 
 

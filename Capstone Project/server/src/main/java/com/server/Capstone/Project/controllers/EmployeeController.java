@@ -25,14 +25,6 @@ public class EmployeeController {
         return new ResponseEntity<>(employeeService.getEmployees(), HttpStatus.OK);
     }
 
-
-    @PostMapping
-    public ResponseEntity <Employee> createEmployee(
-            @RequestBody EmployeeDTO employeeDTO)
-             {
-        return new ResponseEntity<>(employeeService.addEmployee(employeeDTO), HttpStatus.CREATED);
-    }
-
     @PutMapping (value = "/{id}")
     public ResponseEntity<Employee> updateEmployee(@RequestBody UpdateUserDTO updateUserDTO, @PathVariable Long id){
         return new ResponseEntity<>(employeeService.updateEmployee(id, updateUserDTO), HttpStatus.OK);
@@ -41,6 +33,16 @@ public class EmployeeController {
     @DeleteMapping (value = "/{id}")
     public ResponseEntity<Long> deleteEmployee(@PathVariable Long id) {
         return new ResponseEntity<>(employeeService.deleteEmployee(id), HttpStatus.OK);
+    }
+
+    public EmployeeController(EmployeeService employeeService) {
+
+        this.employeeService = employeeService;
+    }
+
+    @PostMapping
+    public ResponseEntity <Employee> createEmployeeWithPosition(@RequestBody EmployeeDTO employeeDTO) {
+        return new ResponseEntity<>(employeeService.createEmployeeWithAPosition(employeeDTO), HttpStatus.OK);
     }
 
 
