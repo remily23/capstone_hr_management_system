@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Alert, Stack } from "@mui/material";
 
-const CreateAccountForm = ({ postEmployee }) => {
+const CreateAccountForm = ({ postEmployee, listOfPositions }) => {
 
     const [errorMessage, setErrorMessage] = useState(null);
     const [successMessage, setSuccessMessage] = useState(null);
@@ -14,7 +14,8 @@ const CreateAccountForm = ({ postEmployee }) => {
         address: "",
         phoneNumber: "",
         proRata: "",
-        salary: ""
+        salary: "",
+        id: null
     });
 
     const handleFormSubmit = (e) => {
@@ -28,7 +29,8 @@ const CreateAccountForm = ({ postEmployee }) => {
             stateEmployee.address === "" ||
             stateEmployee.phoneNumber === "" ||
             stateEmployee.proRata === "" ||
-            stateEmployee.salary === ""
+            stateEmployee.salary === "" ||
+            stateEmployee.id === null
         ) {
             setErrorMessage("Information entered is not correct")
             setSuccessMessage(null);
@@ -47,7 +49,8 @@ const CreateAccountForm = ({ postEmployee }) => {
             address: "",
             phoneNumber: "",
             proRata: "",
-            salary: ""
+            salary: "",
+            id: null
         })
     };
 
@@ -58,17 +61,28 @@ const CreateAccountForm = ({ postEmployee }) => {
         setStateEmployee(copiedEmployee);
     };
 
+    const positionOptions = listOfPositions.map(position => (
+        <option key={position.positionId} value={position.positionId}>
+          {position.department} - {position.title}
+        </option>
+    ));
+
     return (
         <>
             <section className="create-account">
                 <h2>Create Account</h2>
                 <form onSubmit={handleFormSubmit}>
-                    <section className="access-level-dropdown">Access Level:
-                        <select id="dropdown">
-                            <option>Admin</option>
-                            <option>Employee</option>
-                        </select></section>
+
+                    <section>
+                        <label htmlFor="position">Position:</label>
+                            <select id="position" name="id" value={stateEmployee.id} onChange={handleChange}>
+                              <option>Select Position</option>
+                                {positionOptions}
+                        </select>
+                    </section>
+
                     <section className="create-account-form-container">
+
                         <section>
                             <label>First Name: </label>
                             <input
@@ -78,6 +92,7 @@ const CreateAccountForm = ({ postEmployee }) => {
                                 placeholder="Enter your first name"
                                 value={stateEmployee.firstName} />
                         </section>
+
                         <section>
                             <label>Last Name: </label>
                             <input
@@ -87,6 +102,7 @@ const CreateAccountForm = ({ postEmployee }) => {
                                 placeholder="Enter your last name"
                                 value={stateEmployee.lastName} />
                         </section>
+
                         <section>
                             <label>Email Address: </label>
                             <input
@@ -96,6 +112,7 @@ const CreateAccountForm = ({ postEmployee }) => {
                                 placeholder="Enter your email address"
                                 value={stateEmployee.email} />
                         </section>
+
                         <section>
                             <label>Password: </label>
                             <input
@@ -105,6 +122,7 @@ const CreateAccountForm = ({ postEmployee }) => {
                                 placeholder="Enter your password"
                                 value={stateEmployee.password} />
                         </section>
+
                         <section>
                             <label>Date of Birth: </label>
                             <input
@@ -114,6 +132,7 @@ const CreateAccountForm = ({ postEmployee }) => {
                                 placeholder="Enter your date of birth"
                                 value={stateEmployee.dateOfBirth} />
                         </section>
+
                         <section>
                             <label>Address: </label>
                             <input
@@ -123,6 +142,7 @@ const CreateAccountForm = ({ postEmployee }) => {
                                 placeholder="Enter your address"
                                 value={stateEmployee.address} />
                         </section>
+
                         <section>
                             <label>Phone Number: </label>
                             <input
@@ -132,6 +152,7 @@ const CreateAccountForm = ({ postEmployee }) => {
                                 placeholder="Enter your phone number"
                                 value={stateEmployee.phoneNumber} />
                         </section>
+
                         <section>
                             <label>Pro Rata: </label>
                             <input
@@ -141,6 +162,7 @@ const CreateAccountForm = ({ postEmployee }) => {
                                 placeholder="Enter your pro rata"
                                 value={stateEmployee.proRata} />
                         </section>
+
                         <section>
                             <label>Salary: </label>
                             <input
@@ -150,13 +172,16 @@ const CreateAccountForm = ({ postEmployee }) => {
                                 placeholder="Enter your salary"
                                 value={stateEmployee.salary} />
                         </section>
+
                         <section className="create-account-container">
                             <input
                                 className="create-account-button"
                                 type="submit"
                                 value="Create Account" />
                         </section>
+
                     </section>
+
                     {successMessage && (
                         <Stack>
                             <Alert severity="success">
@@ -171,6 +196,7 @@ const CreateAccountForm = ({ postEmployee }) => {
                             </Alert>
                         </Stack>
                     )}
+
                 </form>
             </section>
         </>

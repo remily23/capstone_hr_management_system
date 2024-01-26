@@ -94,7 +94,7 @@ public class DataLoader implements ApplicationRunner {
 
         Position financeEmployee = new Position(
                 "Finance",
-                "Analyst",
+                "Financial Analyst",
                 "employee");
 
         Position financeManager = new Position(

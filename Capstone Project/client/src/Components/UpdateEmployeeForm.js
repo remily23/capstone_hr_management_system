@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Stack, Alert } from "@mui/material";
 
-const UpdateEmployeeForm = ({ updateEmployee }) => {
+const UpdateEmployeeForm = ({ updateEmployee, listOfPositions }) => {
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -17,7 +17,7 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
 
   };
 
-  const handleReturn= (event) => {
+  const handleReturn = (event) => {
     event.preventDefault()
     navigate("../profile");
   };
@@ -31,12 +31,26 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
     }));
   };
 
+  const positionOptions = listOfPositions.map(position => (
+    <option key={position.positionId} value={position.positionId}>
+      {position.department} - {position.title}
+    </option>
+  ));
+
   return (
     <>
       <section className="update-form-container">
         <h1>Update your details</h1>
         <form onSubmit={handleFormSubmit} className="form-container">
-    
+
+          <section>
+            <label htmlFor="position">Position:</label>
+            <select id="position" name="id" defaultValue="select a position" onChange={handleChange}>
+              <option>Select Position</option>
+                {positionOptions}
+            </select>
+          </section>
+
           <section className="first-name">
             <label>First Name: </label>
             <input
@@ -126,27 +140,27 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
           </section>
 
           <section className="save-button-container">
-          <input
-            type="submit"
-            value="Save"
-            className="save-button"
-            onClick={handleFormSubmit}
-          />
+            <input
+              type="submit"
+              value="Save"
+              className="save-button"
+              onClick={handleFormSubmit}
+            />
           </section>
-          
+
           {updateMessage && (<Stack>
-            <Alert severity= "success"> {updateMessage} </Alert>
+            <Alert severity="success"> {updateMessage} </Alert>
           </Stack>)}
 
           <section className="return-button-container">
-          <input
-             type="submit"
-             value="Return"
-             className="return-button"
-             onClick={handleReturn}
-          />
+            <input
+              type="submit"
+              value="Return"
+              className="return-button"
+              onClick={handleReturn}
+            />
           </section>
-             
+
         </form>
       </section>
     </>

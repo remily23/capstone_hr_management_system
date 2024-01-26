@@ -9,6 +9,8 @@ const ProfilePage = ({ currentUser }) => {
     navigate("/profile/updateDetails", { state: { currentUser } });
   };
 
+  console.log(currentUser.position);
+
   return (
     <section className="profile-container">
       <Avatar
@@ -26,6 +28,9 @@ const ProfilePage = ({ currentUser }) => {
       <p>Phone Number: {currentUser.phoneNumber}</p>
       <p>Pro Rata: {currentUser.proRata}</p>
       <p>Salary: {currentUser.salary}</p>
+      <p>Department: {currentUser.position.department}</p>
+      <p>Role: {currentUser.position.title}</p>
+      <p>Access Level: {currentUser.position.accessLevel}</p>
       <button className="edit-button" onClick={toUpdateEmployeeForm}>
         Edit
       </button>

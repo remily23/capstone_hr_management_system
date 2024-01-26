@@ -1,7 +1,6 @@
 package com.server.Capstone.Project.services;
 
 
-import com.fasterxml.jackson.annotation.JsonView;
 import com.server.Capstone.Project.models.Employee;
 import com.server.Capstone.Project.models.EmployeeDTO;
 import com.server.Capstone.Project.models.Position;
@@ -33,7 +32,11 @@ public class EmployeeService {
     }
 
     public Employee updateEmployee(Long id, UpdateUserDTO updateUserDTO) {
+
         Employee employee = employeeRepository.findById(id).get();
+        Long positionId = updateUserDTO.getId();
+        Position position = positionRepository.findById(positionId).get();
+
         if (updateUserDTO.getFirstName() != null) {
             employee.setFirstName(updateUserDTO.getFirstName());
         }
@@ -60,6 +63,10 @@ public class EmployeeService {
             employee.setSalary(updateUserDTO.getSalary());
         }
 
+        if (updateUserDTO.getId() != null){
+            employee.setPosition(position);
+        }
+
         employeeRepository.save(employee);
         return employee;
     }
@@ -70,9 +77,9 @@ public class EmployeeService {
     }
 
     public Employee createEmployeeWithAPosition(EmployeeDTO employeeDTO) {
-//        Long positionId = employeeDTO.getId();
+        Long positionId = employeeDTO.getId();
 
-//        Position position = positionRepository.findById(positionId).get();
+        Position position = positionRepository.findById(positionId).get();
 
         Employee employee = new Employee(
                 employeeDTO.getFirstName(),
@@ -85,7 +92,8 @@ public class EmployeeService {
                 employeeDTO.getProRata(),
                 employeeDTO.getSalary()
         );
-//        employee.setPosition(position);
+
+        employee.setPosition(position);
         employeeRepository.save(employee);
         return employee;
     }

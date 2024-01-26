@@ -1,12 +1,9 @@
 import React from "react";
-import { Alert, Stack } from "@mui/material";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const DeleteAccount = ({ deleteEmployee, currentUser }) => {
 
   const navigate = useNavigate();
-  const deleteMessage = useState(null);
 
   const handleDeleteAccount = (e) => {
     e.preventDefault();
@@ -15,6 +12,7 @@ const DeleteAccount = ({ deleteEmployee, currentUser }) => {
   };
 
   return (
+    
     <section className="delete-account-container">
       <h3>Delete Profile</h3>
       <p>First Name: {currentUser.firstName}</p>
@@ -25,14 +23,14 @@ const DeleteAccount = ({ deleteEmployee, currentUser }) => {
       <p>Phone Number: {currentUser.phoneNumber}</p>
       <p>Pro Rata: {currentUser.proRota}</p>
       <p>Salary: {currentUser.salary}</p>
+      <p>Department: {currentUser.position.department}</p>
+      <p>Role: {currentUser.position.title}</p>
+      <p>Access Level: {currentUser.position.accessLevel}</p>
+
       <section className="delete-button-container">
         <input className="delete-button" type="submit" value="Delete" onClick={handleDeleteAccount} />
       </section>
-      {deleteMessage && (
-        <Stack>
-          <Alert severity="success">{deleteMessage}</Alert>
-        </Stack>
-      )}
+
     </section>
   );
 };

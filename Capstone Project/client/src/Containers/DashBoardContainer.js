@@ -12,12 +12,19 @@ const DashBoardContainer = () => {
 
   const [listOfEmployees, setListOfEmployees] = useState([]);
   const [currentUser, setCurrentUser] = useState({});
+  const [listOfPositions, setListOfPositions] = useState([]);
   
   const fetchEmployee = async () => {
     const response = await fetch("http://localhost:8080/employees");
     const data = await response.json();
     setListOfEmployees(data);
   };
+
+  const fetchPositions = async () => {
+    const response = await fetch("http://localhost:8080/positions");
+    const data = await response.json();
+    setListOfPositions(data);
+  }
 
   const postEmployee = async (newEmployee) => {
     const response = await fetch("http://localhost:8080/employees", {
@@ -62,6 +69,7 @@ const DashBoardContainer = () => {
 
   useEffect(() => {
     fetchEmployee();
+    fetchPositions();
   }, []);
 
   const appRoutes = createBrowserRouter([
@@ -91,6 +99,7 @@ const DashBoardContainer = () => {
           element: (
             <CreateAccountForm
               postEmployee={postEmployee}
+              listOfPositions={listOfPositions}
             />
           ),
         },
@@ -100,7 +109,7 @@ const DashBoardContainer = () => {
         },
         {
           path: "/profile/updateDetails",
-          element: <UpdateEmployeeForm updateEmployee={updateEmployee} />,
+          element: <UpdateEmployeeForm updateEmployee={updateEmployee} listOfPositions={listOfPositions} />,
         },
         {
           path: "/deleteAccount",

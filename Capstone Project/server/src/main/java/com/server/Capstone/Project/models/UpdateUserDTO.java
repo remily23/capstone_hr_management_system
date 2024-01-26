@@ -9,6 +9,7 @@ public class UpdateUserDTO {
     private String phoneNumber;
     private double proRata;
     private int salary;
+    private Long id;
 
     public UpdateUserDTO(){
 
@@ -16,6 +17,14 @@ public class UpdateUserDTO {
 
     public String getFirstName() {
         return firstName;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public void setFirstName(String firstName) {

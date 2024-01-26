@@ -10,7 +10,7 @@ public class EmployeeDTO {
     private String phoneNumber;
     private double proRata;
     private int salary;
-//    private Long id;
+    private Long id;
 
     public EmployeeDTO() {
     }
@@ -27,13 +27,13 @@ public class EmployeeDTO {
         return lastName;
     }
 
-//    public Long getId() {
-//        return id;
-//    }
-//
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
