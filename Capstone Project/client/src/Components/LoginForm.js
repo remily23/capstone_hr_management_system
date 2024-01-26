@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -17,12 +17,9 @@ const LoginForm = ({ listOfEmployees, setCurrentUser }) => {
     email: "",
     password: "",
   });
-const location = useLocation();
-// const user =location.state.currentUser;
   const [error, setError] = useState(null);
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    // window.location.reload();
     const foundEmployee = listOfEmployees.find(
       (employee) => employee.email === stateLogin.email
     );
@@ -44,9 +41,9 @@ const location = useLocation();
   };
   return (
     <Container component="main" maxWidth="xs"
-    sx={{
-      backgroundColor: '#F5F5F5',
-    }}
+      sx={{
+        backgroundColor: '#F5F5F5',
+      }}
     >
       <CssBaseline />
       <Box
@@ -55,7 +52,6 @@ const location = useLocation();
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          
         }}
       >
         <Avatar sx={{ m: 1, bgcolor: "brown", }}>
@@ -85,7 +81,7 @@ const location = useLocation();
             autoComplete="email"
             autoFocus
             onChange={handleChange}
-            value={stateLogin.email}  
+            value={stateLogin.email}
           />
           <TextField
             margin="normal"

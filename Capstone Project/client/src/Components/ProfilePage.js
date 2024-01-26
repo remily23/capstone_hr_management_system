@@ -1,6 +1,4 @@
-import { useNavigate, Outlet } from "react-router-dom";
-import { Alert, Stack } from "@mui/material";
-import AlertTitle from "@mui/material/AlertTitle";
+import { useNavigate } from "react-router-dom";
 import Avatar from "@mui/material/Avatar";
 import aanis from "../aanis.jpg";
 const ProfilePage = ({ currentUser }) => {

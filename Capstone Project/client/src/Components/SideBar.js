@@ -6,16 +6,12 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Avatar, Button, CssBaseline, Typography } from "@mui/material";
+import { Avatar, Button, CssBaseline } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import LogoutIcon from "@mui/icons-material/Logout";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import PersonRemoveIcon from "@mui/icons-material/PersonRemove";
-import VpnKeyIcon from "@mui/icons-material/VpnKey";
-import LightModeIcon from "@mui/icons-material/LightMode";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
-import LiveHelpIcon from "@mui/icons-material/LiveHelp";
 const SideBar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const toggleDrawer = (open) => () => {
@@ -30,10 +26,6 @@ const SideBar = () => {
       link: "/deleteAccount",
       icon: <PersonRemoveIcon />,
     },
-    { text: "Password", link: "/profile", icon: <VpnKeyIcon /> },
-    { text: "Light mode", link: "/dashboard", icon: <LightModeIcon /> },
-    { text: "Dark mode", link: "/dashboard", icon: <DarkModeIcon /> },
-    { text: "FAQs", link: "/dashboard", icon: <LiveHelpIcon /> },
     { text: "Sign-out", link: "/login", icon: <LogoutIcon /> },
   ];
   return (
@@ -44,15 +36,14 @@ const SideBar = () => {
           onClick={toggleDrawer(true)}
           startIcon={<MenuIcon />}
           variant="contained"
-          style={{ backgroundColor: "#4CAF50", color: "#ffffff" }}
-
+          style={{ backgroundColor: "#4CAF50", color: "#FFFFFF" }}
         >
           Menu
         </Button>
         <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
           <List>
             {menuItems.map((item, index) => (
-              <ListItem key={index} button onClick={toggleDrawer(false)}>
+              <ListItem key={index} onClick={toggleDrawer(false)}>
                 <ListItemButton>
                   <Avatar sx={{ bgcolor: "#4CAF50", mr: 2 }}>
                     {item.icon}

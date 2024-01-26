@@ -1,17 +1,14 @@
 import React from "react";
-import { EmojiEmotions } from "@mui/icons-material";
-import { Button, Alert, Stack, AlertTitle } from "@mui/material";
+import { Alert, Stack } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 const DeleteAccount = ({ deleteEmployee, currentUser }) => {
   const navigate = useNavigate();
-  const [deleteMessage, setDeleteMessage] = useState(null);
-
+  const deleteMessage = useState(null);
   const handleDeleteAccount = (e) => {
     e.preventDefault();
     deleteEmployee(currentUser.id);
     navigate("../login");
-
   };
   return (
     <section className="delete-account-container">
@@ -25,7 +22,7 @@ const DeleteAccount = ({ deleteEmployee, currentUser }) => {
       <p>Pro Rata: {currentUser.proRota}</p>
       <p>Salary: {currentUser.salary}</p>
       <section className="delete-button-container">
-      <input className="delete-button" type="submit" value="Delete" onClick={handleDeleteAccount} />
+        <input className="delete-button" type="submit" value="Delete" onClick={handleDeleteAccount} />
       </section>
       {deleteMessage && (
         <Stack>
