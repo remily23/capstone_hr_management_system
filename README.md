@@ -118,11 +118,12 @@ The developer team evaluated what impact these risks could have on users, the pr
 - [X] **Implement Material UI** for improved UX.
 - [X] **Add dynamic table on the dashboard to display all users.** Users will be able to view and filter results.
 
-## 6. API Routes ** to amend
+## 6. API Routes
 |       Request  | Path |Description                          |
 |:------------------------------:|:-------------|:-------------------------------------|
-|           GET            | /dashboard         | Gets the user dashboard for the logged in user                   |
-|           GET            | /profile         | Gets the user profile for the logged in user                   |
-|           PUT            | /profile/updateDetails         | Updates the user profile for the user logged in         |
-|           POST            | /newaccount          | Adds a new employee                    |
-|           DELETE            | /deleteaccount         | Deletes an employee account         |
+|           GET            | /employees         | Gets all employees                 |             |
+|           GET            | /positions         | Gets all positions                 |             |
+|           POST            | /employees         | Create a new employee      | 
+|           POST            | /positions         | Create a new position      | 
+|           PUT            | /employees/{id}        | Update an employee         |
+|           DELETE            | /employees/{id}         | Delete an employee        |
