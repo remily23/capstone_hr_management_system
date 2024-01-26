@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import Table from './Table';
 import { Typography } from "@mui/material";
-const DashBoard = ({ currentUser }) => {
+
+const DashBoard = ({ currentUser, mappedEmployees }) => {
+
   const [greet, setGreet] = useState("");
   const getCurrentTime = () => new Date().getHours();
+
   const greetingTime = (hour) => {
     if (hour >= 5 && hour < 12) {
       return "Good Morning";
@@ -13,16 +16,19 @@ const DashBoard = ({ currentUser }) => {
       return "Good Evening";
     }
   };
+
   useEffect(() => {
     const hour = getCurrentTime();
     const greeting = greetingTime(hour);
     setGreet(greeting);
   }, []);
+
   return (
     <>
       <Typography component="h1" variant="h5">{`${greet}, ${currentUser.firstName} ${currentUser.lastName}!`}</Typography>
-      <Table />
+      <Table mappedEmployees={mappedEmployees} />
     </>
   );
 };
+
 export default DashBoard;

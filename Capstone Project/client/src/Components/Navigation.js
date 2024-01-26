@@ -1,7 +1,9 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import SideBar from "./SideBar";
+
 const Navigation = () => {
+
   return (
     <>
       <nav>
@@ -11,4 +13,5 @@ const Navigation = () => {
     </>
   );
 };
+
 export default Navigation;

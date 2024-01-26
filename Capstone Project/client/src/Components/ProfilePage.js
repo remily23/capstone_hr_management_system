@@ -1,11 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import Avatar from "@mui/material/Avatar";
 import aanis from "../aanis.jpg";
+
 const ProfilePage = ({ currentUser }) => {
+
   const navigate = useNavigate();
   const toUpdateEmployeeForm = () => {
     navigate("/profile/updateDetails", { state: { currentUser } });
   };
+
   return (
     <section className="profile-container">
       <Avatar
@@ -29,4 +32,5 @@ const ProfilePage = ({ currentUser }) => {
     </section>
   );
 };
+
 export default ProfilePage;
