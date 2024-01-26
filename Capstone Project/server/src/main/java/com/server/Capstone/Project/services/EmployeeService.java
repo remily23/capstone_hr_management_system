@@ -4,6 +4,7 @@ package com.server.Capstone.Project.services;
 import com.fasterxml.jackson.annotation.JsonView;
 import com.server.Capstone.Project.models.Employee;
 import com.server.Capstone.Project.models.EmployeeDTO;
+import com.server.Capstone.Project.models.Position;
 import com.server.Capstone.Project.models.UpdateUserDTO;
 import com.server.Capstone.Project.respositories.EmployeeRepository;
 import com.server.Capstone.Project.respositories.PositionRepository;
@@ -25,22 +26,6 @@ public class EmployeeService {
 
     public List<Employee> getEmployees() {
         return employeeRepository.findAll();
-    }
-
-    public Employee addEmployee(EmployeeDTO employeeDTO) {
-        Employee employee = new Employee(
-                employeeDTO.getFirstName(),
-                employeeDTO.getLastName(),
-                employeeDTO.getEmail(),
-                employeeDTO.getPassword(),
-                employeeDTO.getDateOfBirth(),
-                employeeDTO.getAddress(),
-                employeeDTO.getPhoneNumber(),
-                employeeDTO.getProRata(),
-                employeeDTO.getSalary()
-        );
-        employeeRepository.save(employee);
-        return employee;
     }
 
     public Employee getEmployeeById(long id) {
@@ -82,5 +67,26 @@ public class EmployeeService {
     public Long deleteEmployee(Long id) {
         employeeRepository.deleteById(id);
         return id;
+    }
+
+    public Employee createEmployeeWithAPosition(EmployeeDTO employeeDTO) {
+        Long positionId = employeeDTO.getId();
+
+        Position position = positionRepository.findById(positionId).get();
+
+        Employee employee = new Employee(
+                employeeDTO.getFirstName(),
+                employeeDTO.getLastName(),
+                employeeDTO.getEmail(),
+                employeeDTO.getPassword(),
+                employeeDTO.getDateOfBirth(),
+                employeeDTO.getAddress(),
+                employeeDTO.getPhoneNumber(),
+                employeeDTO.getProRata(),
+                employeeDTO.getSalary()
+        );
+        employee.setPosition(position);
+        employeeRepository.save(employee);
+        return employee;
     }
 }
