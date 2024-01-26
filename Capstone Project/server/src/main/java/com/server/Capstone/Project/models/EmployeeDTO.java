@@ -8,9 +8,9 @@ public class EmployeeDTO {
     private String dateOfBirth;
     private String address;
     private String phoneNumber;
-    private int proRata;
+    private double proRata;
     private int salary;
-    private Long id;
+//    private Long id;
 
     public EmployeeDTO() {
     }
@@ -27,13 +27,13 @@ public class EmployeeDTO {
         return lastName;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
+//    public Long getId() {
+//        return id;
+//    }
+//
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
@@ -79,11 +79,11 @@ public class EmployeeDTO {
         this.phoneNumber = phoneNumber;
     }
 
-    public int getProRata() {
+    public double getProRata() {
         return proRata;
     }
 
-    public void setProRata(int proRata) {
+    public void setProRata(double proRata) {
         this.proRata = proRata;
     }
 

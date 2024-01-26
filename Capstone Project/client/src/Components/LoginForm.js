@@ -11,13 +11,16 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import Alert from "@mui/material/Alert";
+
 const LoginForm = ({ listOfEmployees, setCurrentUser }) => {
+
   const navigate = useNavigate();
   const [stateLogin, setStateLogin] = useState({
     email: "",
     password: "",
   });
   const [error, setError] = useState(null);
+
   const handleFormSubmit = (event) => {
     event.preventDefault();
     const foundEmployee = listOfEmployees.find(
@@ -33,12 +36,14 @@ const LoginForm = ({ listOfEmployees, setCurrentUser }) => {
       navigate("/dashboard");
     }
   };
+
   const handleChange = (event) => {
     let fieldName = event.target.name;
     let copiedEmployee = { ...stateLogin };
     copiedEmployee[fieldName] = event.target.value;
     setStateLogin(copiedEmployee);
   };
+
   return (
     <Container component="main" maxWidth="xs"
       sx={{
@@ -108,4 +113,5 @@ const LoginForm = ({ listOfEmployees, setCurrentUser }) => {
     </Container>
   );
 };
+
 export default LoginForm;

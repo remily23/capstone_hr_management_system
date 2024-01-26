@@ -70,9 +70,9 @@ public class EmployeeService {
     }
 
     public Employee createEmployeeWithAPosition(EmployeeDTO employeeDTO) {
-        Long positionId = employeeDTO.getId();
+//        Long positionId = employeeDTO.getId();
 
-        Position position = positionRepository.findById(positionId).get();
+//        Position position = positionRepository.findById(positionId).get();
 
         Employee employee = new Employee(
                 employeeDTO.getFirstName(),
@@ -85,7 +85,7 @@ public class EmployeeService {
                 employeeDTO.getProRata(),
                 employeeDTO.getSalary()
         );
-        employee.setPosition(position);
+//        employee.setPosition(position);
         employeeRepository.save(employee);
         return employee;
     }

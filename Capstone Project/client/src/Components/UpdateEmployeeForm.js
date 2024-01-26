@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Stack, Alert } from "@mui/material";
+
 const UpdateEmployeeForm = ({ updateEmployee }) => {
 
   const navigate = useNavigate();
@@ -15,10 +16,12 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
     setUpdateMessage("User has been updated successfully");
 
   };
+
   const handleReturn= (event) => {
     event.preventDefault()
     navigate("../profile");
-  }
+  };
+
   const handleChange = (e) => {
     const fieldName = e.target.name;
     const fieldValue = e.target.value;
@@ -27,11 +30,13 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
       [fieldName]: fieldValue,
     }));
   };
+
   return (
     <>
       <section className="update-form-container">
         <h1>Update your details</h1>
         <form onSubmit={handleFormSubmit} className="form-container">
+    
           <section className="first-name">
             <label>First Name: </label>
             <input
@@ -42,6 +47,7 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
               value={employeeDetails.firstName}
             />
           </section>
+
           <section className="last-name">
             <label>Last Name: </label>
             <input
@@ -52,6 +58,7 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
               value={employeeDetails.lastName}
             />
           </section>
+
           <section className="email">
             <label>Email Address: </label>
             <input
@@ -62,6 +69,7 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
               value={employeeDetails.email}
             />
           </section>
+
           <section className="dob">
             <label>Date of Birth: </label>
             <input
@@ -72,6 +80,7 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
               value={employeeDetails.dateOfBirth}
             />
           </section>
+
           <section className="address">
             <label>Address: </label>
             <input
@@ -82,6 +91,7 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
               value={employeeDetails.address}
             />
           </section>
+
           <section className="phone-number">
             <label>Phone Number: </label>
             <input
@@ -92,6 +102,7 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
               value={employeeDetails.phoneNumber}
             />
           </section>
+
           <section className="pro-rota">
             <label>Pro Rata: </label>
             <input
@@ -102,6 +113,7 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
               value={employeeDetails.proRota}
             />
           </section>
+
           <section className="salary">
             <label>Salary: </label>
             <input
@@ -112,6 +124,7 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
               value={employeeDetails.salary}
             />
           </section>
+
           <section className="save-button-container">
           <input
             type="submit"
@@ -124,6 +137,7 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
           {updateMessage && (<Stack>
             <Alert severity= "success"> {updateMessage} </Alert>
           </Stack>)}
+
           <section className="return-button-container">
           <input
              type="submit"
@@ -133,10 +147,7 @@ const UpdateEmployeeForm = ({ updateEmployee }) => {
           />
           </section>
              
-          
         </form>
-        
-        
       </section>
     </>
   );

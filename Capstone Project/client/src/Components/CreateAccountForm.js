@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Alert, Stack } from "@mui/material";
-const CreateAccountForm = (postEmployee) => {
+
+const CreateAccountForm = ({ postEmployee }) => {
+
     const [errorMessage, setErrorMessage] = useState(null);
     const [successMessage, setSuccessMessage] = useState(null);
     const [stateEmployee, setStateEmployee] = useState({
@@ -14,6 +16,7 @@ const CreateAccountForm = (postEmployee) => {
         proRata: "",
         salary: ""
     });
+
     const handleFormSubmit = (e) => {
         e.preventDefault();
         if (
@@ -30,10 +33,11 @@ const CreateAccountForm = (postEmployee) => {
             setErrorMessage("Information entered is not correct")
             setSuccessMessage(null);
         } else {
+            postEmployee(stateEmployee)
             setSuccessMessage("Account created successfully")
             setErrorMessage(null);
         }
-        postEmployee(stateEmployee)
+
         setStateEmployee({
             firstName: "",
             lastName: "",
@@ -46,12 +50,14 @@ const CreateAccountForm = (postEmployee) => {
             salary: ""
         })
     };
+
     const handleChange = (e) => {
         let fieldName = e.target.name;
         let copiedEmployee = { ...stateEmployee };
         copiedEmployee[fieldName] = e.target.value;
         setStateEmployee(copiedEmployee);
     };
+
     return (
         <>
             <section className="create-account">
@@ -170,4 +176,5 @@ const CreateAccountForm = (postEmployee) => {
         </>
     );
 };
+
 export default CreateAccountForm;

@@ -12,11 +12,14 @@ import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import LogoutIcon from "@mui/icons-material/Logout";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import PersonRemoveIcon from "@mui/icons-material/PersonRemove";
+
 const SideBar = () => {
+
   const [drawerOpen, setDrawerOpen] = useState(false);
   const toggleDrawer = (open) => () => {
     setDrawerOpen(open);
   };
+
   const menuItems = [
     { text: "Dashboard", link: "/dashboard", icon: <HomeIcon /> },
     { text: "Profile", link: "/profile", icon: <PersonOutlineIcon /> },
@@ -28,6 +31,7 @@ const SideBar = () => {
     },
     { text: "Sign-out", link: "/login", icon: <LogoutIcon /> },
   ];
+
   return (
     <>
       <CssBaseline />
@@ -63,4 +67,5 @@ const SideBar = () => {
     </>
   );
 };
+
 export default SideBar;
