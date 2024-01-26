@@ -84,12 +84,8 @@ The developer team evaluated what impact these risks could have on users, the pr
 
 ## 3.2 Client Side Setup
 1. Open the project in Visual Studio Code
-2. Enter `npi i` in the terminal to install the node modules
-3. Enter `npm install react-router-dom` in the terminal to install the React Router
-4. Enter `npm install @mui/material @emotion/react @emotion/styled` to install the dependencies associated with the Material UI library
-5. Enter `npm install @mui/x-data-grid` for Material UI dependencies associated with the dashboard table
-6. Start running the app with `npm start` in the terminal
-
+2. Enter `npi i` in the terminal to install the node modules and dependencies associated with Material UI
+3. Start running the app with `npm start` in the terminal
 
 ## 4. Diagrams 🎨
 
@@ -97,7 +93,7 @@ The developer team evaluated what impact these risks could have on users, the pr
 ![Component/Container Diagram](https://github.com/remily23/capstone_hr_management_system/blob/readme/Diagrams/Component:Container%20Diagram.png?raw=true)
 
 ## 4.2. UML Diagram
-![UM Diagram](https://github.com/remily23/capstone_hr_management_system/blob/readme/Diagrams/UML%20Diagram.png?raw=true)
+![UM Diagram](https://raw.githubusercontent.com/remily23/capstone_hr_management_system/336a73e664bb9813ac492175e231b8699c538f5c/Diagrams/UML%20Diagram.png)
 
 ## 4.3. ER Diagram
 ![ER Diagram](https://github.com/remily23/capstone_hr_management_system/blob/readme/Diagrams/ER%20Diagram.png?raw=true)
@@ -122,7 +118,7 @@ The developer team evaluated what impact these risks could have on users, the pr
 - [X] **Implement Material UI** for improved UX.
 - [X] **Add dynamic table on the dashboard to display all users.** Users will be able to view and filter results.
 
-## 6. API Routes
+## 6. API Routes ** to amend
 |       Request  | Path |Description                          |
 |:------------------------------:|:-------------|:-------------------------------------|
 |           GET            | /dashboard         | Gets the user dashboard for the logged in user                   |
