@@ -93,7 +93,7 @@ The developer team evaluated what impact these risks could have on users, the pr
 ![Component/Container Diagram](https://github.com/remily23/capstone_hr_management_system/blob/readme/Diagrams/Component:Container%20Diagram.png?raw=true)
 
 ## 4.2. UML Diagram
-![UM Diagram](https://github.com/remily23/capstone_hr_management_system/blob/readme/Diagrams/UML%20Diagram.png?raw=true)
+![UM Diagram](https://raw.githubusercontent.com/remily23/capstone_hr_management_system/336a73e664bb9813ac492175e231b8699c538f5c/Diagrams/UML%20Diagram.png)
 
 ## 4.3. ER Diagram
 ![ER Diagram](https://github.com/remily23/capstone_hr_management_system/blob/readme/Diagrams/ER%20Diagram.png?raw=true)
