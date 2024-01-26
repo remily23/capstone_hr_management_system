@@ -102,7 +102,7 @@ The developer team evaluated what impact these risks could have on users, the pr
 ![Persona Diagram](https://github.com/remily23/capstone_hr_management_system/blob/readme/Diagrams/Persona%20Diagram.png?raw=true)
 
 ## 4.5. Wireframe Diagram
-![Wireframe Diagram](https://github.com/remily23/capstone_hr_management_system/blob/readme/Diagrams/Wireframe%20Diagram.png?raw=true)
+![Wireframe Diagram](https://github.com/remily23/capstone_hr_management_system/blob/0c243b4da6bf1f3be9f2cf77025745e145b0fd11/Diagrams/Wireframe%20Diagram.png?raw=true)
 
 ## 5. System Functionality
 
