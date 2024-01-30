@@ -156,7 +156,7 @@ const CreateAccountForm = ({ postEmployee, listOfPositions }) => {
                         <section>
                             <label>Pro Rata: </label>
                             <input
-                                type="text"
+                                type="number"
                                 onChange={handleChange}
                                 name="proRata"
                                 placeholder="Enter your pro rata"
@@ -166,7 +166,7 @@ const CreateAccountForm = ({ postEmployee, listOfPositions }) => {
                         <section>
                             <label>Salary: </label>
                             <input
-                                type="text"
+                                type="number"
                                 onChange={handleChange}
                                 name="salary"
                                 placeholder="Enter your salary"
